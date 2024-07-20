@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private TroopType type;
-    private int tier;
     private Transform originalParent;
     private Image troopImage;
 
@@ -17,7 +16,6 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     public void Initialize(TroopType troopType)
     {
         type = troopType;
-        tier = 1;
         UpdateTroopSprite();
     }
     private void UpdateTroopSprite()
@@ -44,7 +42,7 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log(type + " " + tier);
+        Debug.Log(type);
         originalParent = transform.parent;
         troopImage.raycastTarget = false; // Disable raycast target
     }
@@ -80,7 +78,7 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         if (hitObject != null && hitObject.CompareTag("TroopImage"))
         {
             TroopImage otherTroop = hitObject.GetComponent<TroopImage>();
-            if (otherTroop != null && otherTroop.type == type && otherTroop.tier == tier)
+            if (otherTroop != null && otherTroop.type == type && otherTroop.type != TroopType.TankRobot)
             {
                 MergeWith(otherTroop);
             }
@@ -95,10 +93,11 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     private void MergeWith(TroopImage otherTroop)
     {
-        Debug.Log(otherTroop.type + " " + otherTroop.tier);
+        Debug.Log(otherTroop.type);
         Destroy(gameObject);
-        otherTroop.tier++;
         // Update the troop's appearance to reflect the new tier
+        otherTroop.type += 1;
+        otherTroop.UpdateTroopSprite();
     }
     private void UpdateGridLayout()
     {

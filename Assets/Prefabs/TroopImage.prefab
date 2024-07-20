@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 321282708465579068}
   m_Layer: 5
   m_Name: TroopImage
-  m_TagString: TroopUI
+  m_TagString: TroopImage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
