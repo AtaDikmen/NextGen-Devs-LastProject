@@ -1,0 +1,1 @@
+public enum TroopType { LaserSword, LaserPistol, LaserRifle, GranadeLauncher, TankRobot }
