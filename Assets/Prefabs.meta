@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: ab68e90ccfe7e8d468edadff0ba30196
+=======
+guid: dccbf1d18125ff14081ed05acb790619
+>>>>>>> StateMachine-Ata1
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
