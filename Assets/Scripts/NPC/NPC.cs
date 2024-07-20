@@ -5,15 +5,29 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
     #region Components
-    public Rigidbody rb { get; private set; }
-    public Animator animator { get; private set; }
     public NpcStateMachine stateMachine { get; private set; }
+    public Animator animator { get; private set; }
+    public Rigidbody rb { get; private set; }
+    public BoxCollider npcCollider { get; private set; }
+    public NpcStats stats { get; private set; }
     #endregion
 
     [Header("Collision Info")]
     [SerializeField] protected Transform targetCheck;
     [SerializeField] protected float targetCheckDistance;
-    [SerializeField] protected LayerMask whatIsTarget;
+    [SerializeField] protected LayerMask whoIsTarget;
+    [SerializeField] protected float allyCheckDistance;
+    [SerializeField] protected LayerMask whoIsAlly;
+
+
+    [Header("Move Info")]
+    public float moveSpeed;
+    public float idleTime;
+
+    [Header("Attack Info")]
+    public float attackDistance;
+    public float attackCooldown;
+    [HideInInspector] public float lastTimeAttacked;
 
 
 
@@ -24,8 +38,10 @@ public class NPC : MonoBehaviour
 
     protected virtual void Start()
     {
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody>();
+        npcCollider = GetComponent<BoxCollider>();
+        stats = GetComponent<NpcStats>();
     }
     
     protected virtual void Update()
@@ -33,22 +49,51 @@ public class NPC : MonoBehaviour
         stateMachine.currentState.Update();
     }
 
-    #region Velocity
-    public void ZeroVelocity() => rb.velocity = new Vector2(0, 0);
-
-    public void SetVelocity(float _xVelocity, float _yVelocity)
+    public virtual void DamageEffect()
     {
-        rb.velocity = new Vector2(_xVelocity, _yVelocity);
+        Debug.Log(gameObject.name + " was damaged!");
+    }
+
+    #region Velocity
+    public void SetZeroVelocity() => rb.velocity = new Vector2(0, 0);
+
+    public void SetVelocity(float moveSpeed)
+    {
+        Vector3 direction = transform.forward * moveSpeed;
+        rb.velocity = new Vector3(direction.x, rb.velocity.y, direction.z);
     }
     #endregion
 
     #region Collision
-    public virtual bool IsTargetDetected() => Physics.Raycast(targetCheck.position, Vector2.right * transform.right, targetCheckDistance, whatIsTarget);
+    public virtual bool IsTargetDetected(out RaycastHit hitInfo)
+    {
+        return Physics.Raycast(targetCheck.position, transform.forward, out hitInfo, targetCheckDistance, whoIsTarget);
+    }
+
+    //public bool IsTargetDetected()
+    //{
+    //    RaycastHit hitInfo;
+    //    return IsTargetDetected(out hitInfo);
+    //}
+
+    public virtual bool IsAllyInFront(out RaycastHit hitInfo)
+    {
+        return Physics.Raycast(targetCheck.position, transform.forward, out hitInfo, allyCheckDistance, whoIsAlly);
+    }
 
     protected virtual void OnDrawGizmos()
     {
-        Gizmos.DrawLine(targetCheck.position, new Vector3(targetCheck.position.x + targetCheckDistance, targetCheck.position.y));
+        Gizmos.DrawLine(targetCheck.position, targetCheck.position + transform.forward * targetCheckDistance);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(targetCheck.position, targetCheck.position + transform.forward * attackDistance);
     }
 
     #endregion
+    public virtual void AnimationFinishTrigger() => stateMachine.currentState.AnimationFinishTrigger();
+
+    public virtual void Die()
+    {
+        Destroy(gameObject, 3f);
+    }
 }

@@ -5,24 +5,26 @@ using UnityEngine;
 public class NpcState
 {
     protected NpcStateMachine stateMachine;
-    protected NPC npc;
+    protected NPC npcBase;
+    protected Rigidbody rb;
 
     private string animBoolName;
 
     protected float stateTimer;
     protected bool triggerCalled;
 
-    public NpcState(NPC _npc, NpcStateMachine _stateMachine, string _animBoolName)
+    public NpcState(NPC _npcBase, NpcStateMachine _stateMachine, string _animBoolName)
     {
-        this.npc = _npc;
+        this.npcBase = _npcBase;
         this.stateMachine = _stateMachine;
         this.animBoolName = _animBoolName;
     }
 
     public virtual void Enter()
     {
+        rb = npcBase.rb;
         triggerCalled = false;
-        npc.animator.SetBool(animBoolName, true);
+        npcBase.animator.SetBool(animBoolName, true);
     }
 
     public virtual void Update()
@@ -32,6 +34,11 @@ public class NpcState
 
     public virtual void Exit()
     {
-        npc.animator.SetBool(animBoolName, false);
+        npcBase.animator.SetBool(animBoolName, false);
+    }
+
+    public virtual void AnimationFinishTrigger()
+    {
+        triggerCalled = true;
     }
 }
