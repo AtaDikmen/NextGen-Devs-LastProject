@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Http.Headers;
 using UnityEngine;
 
 public class RifleMan_BattleState : NpcState
@@ -30,11 +31,12 @@ public class RifleMan_BattleState : NpcState
         {
             npc.SetZeroVelocity();
         }
-        else if (npc.IsTargetDetected(out hit))
+        if (npc.IsTargetDetected(out hit))
         {
             if (hit.distance < npc.attackDistance)
             {
-                npc.SetZeroVelocity();
+                if(hit.distance < 2)
+                    npc.SetZeroVelocity();
 
                 if (CanAttack())
                     stateMachine.ChangeState(npc.attackState);

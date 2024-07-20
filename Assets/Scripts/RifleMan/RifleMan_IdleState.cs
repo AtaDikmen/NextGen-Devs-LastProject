@@ -12,7 +12,7 @@ public class RifleMan_IdleState : RifleMan_GroundedState
     {
         base.Enter();
 
-        stateTimer = npc.idleTime;
+        npc.SetZeroVelocity();
     }
 
     public override void Exit()
@@ -24,7 +24,19 @@ public class RifleMan_IdleState : RifleMan_GroundedState
     {
         base.Update();
 
-        if (stateTimer < 0)
+        RaycastHit allyHit;
+        RaycastHit hit;
+        if (npc.IsAllyInFront(out allyHit))
+        {
+            npc.SetZeroVelocity();
+        }
+        else if (npc.IsTargetDetected(out hit))
+        {
+            stateMachine.ChangeState(npc.battleState);
+        }
+        else
+        {
             stateMachine.ChangeState(npc.moveState);
+        }
     }
 }

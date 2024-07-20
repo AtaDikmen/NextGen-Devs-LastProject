@@ -23,5 +23,16 @@ public class RifleMan_MoveState : RifleMan_GroundedState
         base.Update();
 
         npc.SetVelocity(npc.moveSpeed);
+
+        RaycastHit allyHit;
+        if (npc.IsAllyInFront(out allyHit))
+        {
+            stateMachine.ChangeState(npc.idleState);
+        }
+        RaycastHit hit;
+        if (npc.IsTargetDetected(out hit))
+        {
+            stateMachine.ChangeState(npc.battleState);
+        }
     }
 }
