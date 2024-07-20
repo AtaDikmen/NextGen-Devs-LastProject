@@ -13,13 +13,16 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     {
         troopImage = GetComponent<Image>();
     }
+
     public void Initialize(TroopType troopType)
     {
         type = troopType;
         UpdateTroopSprite();
     }
+
     private void UpdateTroopSprite()
-    { //Using color for prototype
+    {
+        // Using color for prototype
         switch (type)
         {
             case TroopType.LaserSword:
@@ -42,51 +45,47 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log(type);
         originalParent = transform.parent;
-        troopImage.raycastTarget = false; // Disable raycast target
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = eventData.position;
+        // Convert screen position to world position for UI elements
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            (RectTransform)originalParent, eventData.position, eventData.pressEventCamera, out Vector2 localPoint);
+        transform.localPosition = localPoint;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        troopImage.raycastTarget = true; // Re-enable raycast target
-
-        // Perform raycast to detect the object under the pointer
-        PointerEventData pointerEventData = new PointerEventData(EventSystem.current)
-        {
-            position = eventData.position
-        };
+        // Convert screen position to world position for UI elements
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            (RectTransform)originalParent, eventData.position, eventData.pressEventCamera, out Vector2 localPoint);
+        transform.localPosition = localPoint;
 
         List<RaycastResult> raycastResults = new List<RaycastResult>();
-        EventSystem.current.RaycastAll(pointerEventData, raycastResults);
+        EventSystem.current.RaycastAll(eventData, raycastResults);
 
-        GameObject hitObject = null;
+        TroopImage otherTroop = null;
         foreach (var result in raycastResults)
         {
-            if (result.gameObject != gameObject)
+            if (result.gameObject != gameObject && result.gameObject.CompareTag("TroopImage"))
             {
-                hitObject = result.gameObject;
+                otherTroop = result.gameObject.GetComponent<TroopImage>();
+                break;
+            }
+            else if (result.gameObject != gameObject && result.gameObject.CompareTag("Lane"))
+            {
+                Debug.Log("Deployed to lane!");
                 break;
             }
         }
 
-        if (hitObject != null && hitObject.CompareTag("TroopImage"))
+        if (otherTroop != null && otherTroop.type == type && otherTroop.type != TroopType.TankRobot)
         {
-            TroopImage otherTroop = hitObject.GetComponent<TroopImage>();
-            if (otherTroop != null && otherTroop.type == type && otherTroop.type != TroopType.TankRobot)
-            {
-                MergeWith(otherTroop);
-            }
+            MergeWith(otherTroop);
         }
-        else if (hitObject != null && hitObject.CompareTag("Lane"))
-        {
-            Debug.Log("Deployed to lane!");
-        }
+        //Handle Lane Case
 
         UpdateGridLayout();
     }
@@ -99,6 +98,7 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         otherTroop.type += 1;
         otherTroop.UpdateTroopSprite();
     }
+
     private void UpdateGridLayout()
     {
         // Ensure the grid layout updates after troop is merged or moved
