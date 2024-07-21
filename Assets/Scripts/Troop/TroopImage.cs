@@ -7,11 +7,11 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 {
     private TroopType type;
     private Transform originalParent;
-    private Image troopImage;
+    private Renderer troopRenderer;
 
     void Awake()
     {
-        troopImage = GetComponent<Image>();
+        troopRenderer = GetComponentInChildren<Renderer>();
     }
 
     public void Initialize(TroopType troopType)
@@ -22,26 +22,26 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     private void UpdateTroopSprite()
     {
-        // Using color for prototype
         switch (type)
         {
             case TroopType.LaserSword:
-                troopImage.color = Color.white;
+                troopRenderer.material.color = Color.white;
                 break;
             case TroopType.LaserPistol:
-                troopImage.color = Color.cyan;
+                troopRenderer.material.color = Color.cyan;
                 break;
             case TroopType.LaserRifle:
-                troopImage.color = Color.red;
+                troopRenderer.material.color = Color.red;
                 break;
             case TroopType.GranadeLauncher:
-                troopImage.color = Color.yellow;
+                troopRenderer.material.color = Color.yellow;
                 break;
             case TroopType.TankRobot:
-                troopImage.color = Color.black;
+                troopRenderer.material.color = Color.black;
                 break;
         }
     }
+
 
     public void OnBeginDrag(PointerEventData eventData)
     {

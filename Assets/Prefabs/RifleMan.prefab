@@ -1633,6 +1633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cf54d462b4c8a04494760b35e26e309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nowState: 
   targetCheck: {fileID: 3415696087932994098}
   targetCheckDistance: 7
   whoIsTarget:
