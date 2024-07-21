@@ -130,7 +130,7 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     private void MergeWith(TroopImage otherTroop)
     {
-        if (otherTroop.GetChildObject().activeSelf)
+        if (otherTroop.GetChildObject().activeSelf && childObject.activeSelf)
         {
             DeactivateTroopImage();
             // Update the other troop's appearance to reflect the new tier
