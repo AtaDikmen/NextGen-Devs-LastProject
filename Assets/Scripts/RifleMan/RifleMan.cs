@@ -1,12 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEngine;
-
 public class RifleMan : NPC
 {
     #region States
-    public RifleMan_IdleState idleState {  get; private set; }
+    public RifleMan_IdleState idleState { get; private set; }
     public RifleMan_MoveState moveState { get; private set; }
     public RifleMan_BattleState battleState { get; private set; }
     public RifleMan_AttackState attackState { get; private set; }
