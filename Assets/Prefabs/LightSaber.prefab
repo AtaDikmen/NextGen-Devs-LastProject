@@ -1188,7 +1188,7 @@ MonoBehaviour:
   whoIsAlly:
     serializedVersion: 2
     m_Bits: 64
-  moveSpeed: 3
+  moveSpeed: 2
   idleTime: 1
   attackDistance: 2
   attackCooldown: 0.5

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    private Spawner spawner;
+
     private TroopType type;
     private Transform originalParent;
     private Renderer troopRenderer;
@@ -16,6 +18,8 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     public void Initialize(TroopType troopType)
     {
+        spawner = FindObjectOfType<Spawner>();
+
         type = troopType;
         UpdateTroopSprite();
     }
@@ -76,6 +80,7 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             }
             else if (result.gameObject != gameObject && result.gameObject.CompareTag("Lane"))
             {
+                DeployTroopOnLane(result);
                 Debug.Log("Deployed to lane!");
                 break;
             }
@@ -88,6 +93,30 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         //Handle Lane Case
 
         UpdateGridLayout();
+    }
+
+    private void DeployTroopOnLane(RaycastResult result)
+    {
+        switch (result.gameObject.name)
+        {
+            case "Lane 1":
+                spawner.SpawnTroop(type, 0);
+                break;
+            case "Lane 2":
+                spawner.SpawnTroop(type, 1);
+                break;
+            case "Lane 3":
+                spawner.SpawnTroop(type, 2);
+                break;
+            case "Lane 4":
+                spawner.SpawnTroop(type, 3);
+                break;
+            case "Lane 5":
+                spawner.SpawnTroop(type, 4);
+                break;
+            default:
+                break;
+        }
     }
 
     private void MergeWith(TroopImage otherTroop)
