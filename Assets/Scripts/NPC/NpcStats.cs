@@ -6,8 +6,11 @@ public class NpcStats : MonoBehaviour
 {
     public Stat damage;
     public Stat maxHealth;
+    public int power;
+    public int laneIndex;
 
     [SerializeField] private int currentHealth;
+    [SerializeField] private LaneManager laneManager;
 
     protected virtual void Start()
     {
@@ -31,6 +34,6 @@ public class NpcStats : MonoBehaviour
 
     protected virtual void Die()
     {
-
+        laneManager.RemoveTroop(transform, laneIndex);
     }
 }

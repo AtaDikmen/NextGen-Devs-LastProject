@@ -8,6 +8,7 @@ public class Spawner : MonoBehaviour
 
     [SerializeField] private GameObject rifleMan, lightSaber;
     [SerializeField] private Transform[] spawnPositions;
+    [SerializeField] private LaneManager laneManager;
 
     void Start()
     {
@@ -32,6 +33,8 @@ public class Spawner : MonoBehaviour
         if (troopPrefab != null)
         {
             Instantiate(troopPrefab, spawnPositions[index].position, Quaternion.Euler(0, 90, 0));
+            troopPrefab.GetComponent<NpcStats>().laneIndex = index;
+            laneManager.AddTroop(troopPrefab.transform, index);
         }
     }
 
