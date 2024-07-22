@@ -19,7 +19,7 @@ public class NPC : MonoBehaviour
     [Header("Collision Info")]
     [SerializeField] protected Transform targetCheck;
     [SerializeField] protected float targetCheckDistance;
-    [SerializeField] protected LayerMask whoIsTarget;
+    public LayerMask whoIsTarget;
     [SerializeField] protected float allyCheckDistance;
     [SerializeField] protected LayerMask whoIsAlly;
 

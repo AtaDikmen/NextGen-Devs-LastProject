@@ -14,7 +14,7 @@ public class LightSaber : NPC
 
         idleState = new LightSaber_IdleState(this, stateMachine, "Idle", this);
         moveState = new LightSaber_MoveState(this, stateMachine, "Move", this);
-        battleState = new LightSaber_BattleState(this, stateMachine, "Battle", this);
+        battleState = new LightSaber_BattleState(this, stateMachine, "Idle", this);
         attackState = new LightSaber_AttackState(this, stateMachine, "Attack", this);
         deadState = new LightSaber_DeadState(this, stateMachine, "Die", this);
     }

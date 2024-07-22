@@ -1639,7 +1639,7 @@ MonoBehaviour:
   whoIsTarget:
     serializedVersion: 2
     m_Bits: 128
-  allyCheckDistance: 2.5
+  allyCheckDistance: 1.5
   whoIsAlly:
     serializedVersion: 2
     m_Bits: 64

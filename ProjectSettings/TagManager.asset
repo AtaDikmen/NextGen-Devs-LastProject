@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TroopImage
   - Lane
+  - Bomb
   layers:
   - Default
   - TransparentFX
