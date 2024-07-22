@@ -8,6 +8,7 @@ public class NPC : MonoBehaviour
 {
     [SerializeField] protected string nowState;
 
+
     #region Components
     public NpcStateMachine stateMachine { get; private set; }
     public Animator animator { get; private set; }

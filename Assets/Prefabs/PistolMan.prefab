@@ -2957,7 +2957,10 @@ MonoBehaviour:
   maxHealth:
     baseValue: 100
     modifiers: 
+  power: 25
+  laneIndex: 0
   currentHealth: 0
+  laneManager: {fileID: 0}
 --- !u!54 &1646338626761973865
 Rigidbody:
   m_ObjectHideFlags: 0
