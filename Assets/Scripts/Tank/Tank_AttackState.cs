@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RifleMan_AttackState : NpcState
+public class Tank_AttackState : NpcState
 {
-    private RifleMan npc;
-
-    public RifleMan_AttackState(NPC _npcBase, NpcStateMachine _stateMachine, string _animBoolName, RifleMan _npc) : base(_npcBase, _stateMachine, _animBoolName)
+    private Tank npc;
+    public Tank_AttackState(NPC _npcBase, NpcStateMachine _stateMachine, string _animBoolName, Tank _npc) : base(_npcBase, _stateMachine, _animBoolName)
     {
         this.npc = _npc;
     }
@@ -14,8 +13,6 @@ public class RifleMan_AttackState : NpcState
     public override void Enter()
     {
         base.Enter();
-
-        stateTimer = npc.fireDuration;
     }
 
     public override void Exit()
@@ -31,7 +28,7 @@ public class RifleMan_AttackState : NpcState
 
         npc.SetZeroVelocity();
 
-        if (stateTimer < 0)
+        if (triggerCalled)
             stateMachine.ChangeState(npc.battleState);
     }
 }

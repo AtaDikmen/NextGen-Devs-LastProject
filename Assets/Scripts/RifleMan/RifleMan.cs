@@ -1,5 +1,10 @@
+
+using UnityEngine;
+
 public class RifleMan : NPC
 {
+    public float fireDuration;
+
     #region States
     public RifleMan_IdleState idleState { get; private set; }
     public RifleMan_MoveState moveState { get; private set; }
