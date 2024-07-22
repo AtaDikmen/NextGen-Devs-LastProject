@@ -105,7 +105,6 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     }
     private void DeployTroopOnLane(RaycastResult result)
     {
-        DeactivateTroopImage();
         switch (result.gameObject.name)
         {
             case "Lane 1":
@@ -126,6 +125,7 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             default:
                 break;
         }
+        DeactivateTroopImage();
     }
 
     private void MergeWith(TroopImage otherTroop)
