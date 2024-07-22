@@ -37,6 +37,8 @@ public class GridManager : MonoBehaviour
             {
                 troopImages[i].ActivateChild();
                 tempSpawnCount++;
+                AudioClip spawnSFX = Resources.Load<AudioClip>("Spawn");
+                AudioManager.Instance.PlaySFX(spawnSFX);
             }
             i++;
         }

@@ -86,13 +86,18 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
                 Debug.Log("Deployed to lane!");
                 break;
             }
+
         }
 
         if (otherTroop != null && otherTroop.type == type && otherTroop.type != TroopType.TankRobot)
         {
             MergeWith(otherTroop);
         }
-        //Handle Lane Case
+        else
+        {
+            AudioClip declineMergeSFX = Resources.Load<AudioClip>("Decline2");
+            AudioManager.Instance.PlaySFX(declineMergeSFX);
+        }
 
         UpdateGridLayout();
     }
@@ -136,6 +141,8 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             // Update the other troop's appearance to reflect the new tier
             otherTroop.type += 1;
             otherTroop.UpdateTroopSprite();
+            AudioClip mergeSFX = Resources.Load<AudioClip>("MergeLvl" + (int)otherTroop.type);
+            AudioManager.Instance.PlaySFX(mergeSFX);
         }
     }
 
