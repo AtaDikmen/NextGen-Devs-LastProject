@@ -916,6 +916,7 @@ MonoBehaviour:
   - {fileID: 20656606}
   - {fileID: 1533677552}
   - {fileID: 470770644}
+  laneManager: {fileID: 0}
 --- !u!4 &868339075
 Transform:
   m_ObjectHideFlags: 0
