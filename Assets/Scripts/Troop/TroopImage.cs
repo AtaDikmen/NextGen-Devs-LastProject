@@ -10,18 +10,20 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     private TroopType type;
     private Transform originalParent;
     private Renderer troopRenderer;
+    private GameObject childObject;
 
     void Awake()
     {
         troopRenderer = GetComponentInChildren<Renderer>();
+        childObject = transform.GetChild(0).gameObject;
     }
 
     public void Initialize(TroopType troopType)
     {
         spawner = FindObjectOfType<Spawner>();
-
         type = troopType;
         UpdateTroopSprite();
+        DeactivateChild();
     }
 
     private void UpdateTroopSprite()
@@ -95,6 +97,12 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         UpdateGridLayout();
     }
 
+    private void DeactivateTroopImage()
+    {
+        type = 0;
+        UpdateTroopSprite();
+        DeactivateChild();
+    }
     private void DeployTroopOnLane(RaycastResult result)
     {
         switch (result.gameObject.name)
@@ -117,20 +125,36 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             default:
                 break;
         }
+        DeactivateTroopImage();
     }
 
     private void MergeWith(TroopImage otherTroop)
     {
-        Debug.Log(otherTroop.type);
-        Destroy(gameObject);
-        // Update the troop's appearance to reflect the new tier
-        otherTroop.type += 1;
-        otherTroop.UpdateTroopSprite();
+        if (otherTroop.GetChildObject().activeSelf && childObject.activeSelf)
+        {
+            DeactivateTroopImage();
+            // Update the other troop's appearance to reflect the new tier
+            otherTroop.type += 1;
+            otherTroop.UpdateTroopSprite();
+        }
     }
 
     private void UpdateGridLayout()
     {
         // Ensure the grid layout updates after troop is merged or moved
         LayoutRebuilder.ForceRebuildLayoutImmediate(originalParent.GetComponent<RectTransform>());
+    }
+
+    public GameObject GetChildObject()
+    {
+        return childObject;
+    }
+    public void ActivateChild()
+    {
+        childObject.SetActive(true);
+    }
+    public void DeactivateChild()
+    {
+        childObject.SetActive(false);
     }
 }

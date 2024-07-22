@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     public void SpawnTroop(TroopType troopType, int index)
@@ -43,7 +43,7 @@ public class Spawner : MonoBehaviour
         }
         else
         {
-            Debug.LogError($"TroopType {troopType} için prefab bulunamadý!");
+            Debug.LogError($"TroopType {troopType} iï¿½in prefab bulunamadï¿½!");
             return null;
         }
     }
