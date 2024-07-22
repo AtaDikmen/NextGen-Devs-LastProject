@@ -139,7 +139,7 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             otherTroop.type += 1;
             otherTroop.UpdateTroopObject();
             AudioClip mergeSFX = Resources.Load<AudioClip>("MergeLvl" + (int)otherTroop.type);
-            AudioManager.Instance.PlaySFX(mergeSFX);
+            AudioManager.Instance.PlaySFX(mergeSFX,1f);
         }
     }
 
