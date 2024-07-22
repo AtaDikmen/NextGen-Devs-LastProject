@@ -2003,8 +2003,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd17647517482b4b914a6ddf097c0c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  troopImagePrefab: {fileID: 2151014673277426705, guid: 592ef422bea993f4c96f03e18927be82,
+  troopImageParentPrefab: {fileID: 2151014673277426705, guid: 592ef422bea993f4c96f03e18927be82,
     type: 3}
+  troopImagePrefabs:
+  - {fileID: 7466224287699479614, guid: d8c2882bb93a0894ebee8508d17f9073, type: 3}
+  - {fileID: 3335298172988677545, guid: 94a3d093de419694d877126ba30ab6a6, type: 3}
+  - {fileID: 3667880204928441234, guid: b6947c6dfac6e494895ba507593fbcbb, type: 3}
   gridPanel: {fileID: 127239821}
   gridSize: 16
   spawnCount: 2
