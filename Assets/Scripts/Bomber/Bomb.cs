@@ -6,6 +6,9 @@ public class Bomb : MonoBehaviour
     private Rigidbody rb;
     private Transform target;
 
+    private AudioClip explosionSFX;
+
+    [Header("Parabolic Info")]
     private float flightDuration = 2.0f;
     private Vector3 startPosition;
     private float elapsedTime = 0.0f;
@@ -17,6 +20,8 @@ public class Bomb : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.isKinematic = true;
         startPosition = transform.position;
+        
+        explosionSFX = Resources.Load<AudioClip>("BombExplode");
     }
 
     public void SetupBomb(Bomber _bomber, Transform _target)
@@ -55,6 +60,8 @@ public class Bomb : MonoBehaviour
 
     private void DealDamageAndDestroy()
     {
+        AudioManager.Instance.PlaySFX(explosionSFX, .5f);
+
         Collider[] colliders = Physics.OverlapSphere(transform.position, 2);
         foreach (Collider nearbyObject in colliders)
         {

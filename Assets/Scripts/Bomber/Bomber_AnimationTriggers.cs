@@ -20,4 +20,9 @@ public class Bomber_AnimationTriggers : MonoBehaviour
         GameObject bombObject = Instantiate(bombPrefab, bombSpawn.position, Quaternion.identity);
         bombObject.GetComponent<Bomb>().SetupBomb(bomber, bomber.bombTarget);
     }
+
+    private void PlayerBombThrowSound()
+    {
+        AudioManager.Instance.PlaySFX(bomber.attackSFX[0]);
+    }
 }

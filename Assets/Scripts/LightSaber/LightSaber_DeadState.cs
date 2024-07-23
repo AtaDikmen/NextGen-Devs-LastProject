@@ -14,6 +14,8 @@ public class LightSaber_DeadState : NpcState
     {
         base.Enter();
 
+        AudioManager.Instance.PlaySFX(npc.deathSFX[Random.Range(0, npc.deathSFX.Length)], 0.5f);
+
         npc.npcCollider.enabled = false;
     }
 

@@ -24,4 +24,9 @@ public class RifleMan_AnimationTriggers : MonoBehaviour
             }
         }
     }
+
+    private void PlayRifleSound()
+    {
+        AudioManager.Instance.PlaySFX(rifleMan.attackSFX[0], .1f);
+    }
 }

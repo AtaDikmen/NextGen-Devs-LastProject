@@ -64,6 +64,14 @@ MonoBehaviour:
   attackDistance: 2.5
   attackCooldown: 0.6
   lastTimeAttacked: 0
+  attackSFX:
+  - {fileID: 8300000, guid: 42852fbe892e8e44a9aa8098fa666b93, type: 3}
+  - {fileID: 8300000, guid: fa1789bb6a8facf4eba51622f81e54af, type: 3}
+  - {fileID: 8300000, guid: 70b17f2608710154c870f418149e2307, type: 3}
+  deathSFX:
+  - {fileID: 8300000, guid: 8f103a045dd3c0f45a63968898a310bb, type: 3}
+  - {fileID: 8300000, guid: 0d5887c05509a87489ff66f5f2f2cd96, type: 3}
+  - {fileID: 8300000, guid: 6d24dc490d8199b4693d2008d0e11a0d, type: 3}
 --- !u!54 &8714275878807576781
 Rigidbody:
   m_ObjectHideFlags: 0

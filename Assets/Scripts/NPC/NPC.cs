@@ -35,6 +35,10 @@ public class NPC : MonoBehaviour
     [HideInInspector] public float lastTimeAttacked;
 
 
+    [Header("Sound Info")]
+    public AudioClip[] attackSFX;
+    public AudioClip[] deathSFX;
+
 
     protected virtual void Awake()
     {
