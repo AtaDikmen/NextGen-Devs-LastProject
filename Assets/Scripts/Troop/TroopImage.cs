@@ -33,9 +33,7 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
         GameObject prefab = GridManager.Instance.troopImagePrefabs[(int)type];
         childObject = Instantiate(prefab, transform);
-        childObject.transform.localPosition = Vector3.zero;
-        childObject.transform.localRotation = Quaternion.identity;
-
+        childObject.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
     }
 
 
@@ -61,13 +59,11 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
         List<RaycastResult> raycastResults = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventData, raycastResults);
-
-        TroopImage otherTroop = null;
         foreach (var result in raycastResults)
         {
             if (result.gameObject != gameObject && result.gameObject.CompareTag("TroopImage"))
             {
-                otherTroop = result.gameObject.GetComponent<TroopImage>();
+                TroopImage otherTroop = result.gameObject.GetComponent<TroopImage>();
                 if (otherTroop.GetChildObject() != null && otherTroop.type == type && otherTroop.type != TroopType.TankRobot)
                 {
                     MergeWith(otherTroop);
