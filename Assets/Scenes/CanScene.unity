@@ -906,10 +906,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7208090a663f49c4c861da221ee4b4b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rifleMan: {fileID: 7908915051614006644, guid: 24e88f4a5099a1f4c9e8a93b6a86ee33,
-    type: 3}
-  lightSaber: {fileID: 2652287216522705083, guid: d5df3650fbe20ae479936cb32595ca3a,
-    type: 3}
+  troopPrefabs:
+  - {fileID: 2652287216522705083, guid: d5df3650fbe20ae479936cb32595ca3a, type: 3}
+  - {fileID: 3438472181584073056, guid: 00e1c062eff0f85458a2236d5a5415af, type: 3}
+  - {fileID: 7908915051614006644, guid: 24e88f4a5099a1f4c9e8a93b6a86ee33, type: 3}
+  - {fileID: 6715594606427219937, guid: 0b24d11b7a5684b41978c61c4495b29d, type: 3}
+  - {fileID: 4592870715156698518, guid: ee0ac970cb61206488dfc0111b97cefa, type: 3}
   spawnPositions:
   - {fileID: 1234183609}
   - {fileID: 1009469887}
@@ -2007,9 +2009,11 @@ MonoBehaviour:
   troopImageParentPrefab: {fileID: 2151014673277426705, guid: 592ef422bea993f4c96f03e18927be82,
     type: 3}
   troopImagePrefabs:
-  - {fileID: 7466224287699479614, guid: d8c2882bb93a0894ebee8508d17f9073, type: 3}
+  - {fileID: 3291685853665598819, guid: d8c2882bb93a0894ebee8508d17f9073, type: 3}
   - {fileID: 3335298172988677545, guid: 94a3d093de419694d877126ba30ab6a6, type: 3}
+  - {fileID: 2865573970569486610, guid: 4408edba65856974f8a94ab485386ff7, type: 3}
   - {fileID: 3667880204928441234, guid: b6947c6dfac6e494895ba507593fbcbb, type: 3}
+  - {fileID: 4384874127732385319, guid: 38a7940c495ef2f489248aafbb064437, type: 3}
   gridPanel: {fileID: 127239821}
   gridSize: 16
   spawnCount: 2

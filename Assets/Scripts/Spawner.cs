@@ -6,48 +6,18 @@ public class Spawner : MonoBehaviour
 {
     public Dictionary<TroopType, GameObject> troopDictionary;
 
-    [SerializeField] private GameObject rifleMan, lightSaber;
+    [SerializeField] private GameObject[] troopPrefabs;
     [SerializeField] private Transform[] spawnPositions;
     [SerializeField] private LaneManager laneManager;
 
-    void Start()
-    {
-        troopDictionary = new Dictionary<TroopType, GameObject>
-        {
-            { TroopType.LaserSword, lightSaber },
-            //{ TroopType.LaserPistol, laserPistolPrefab },
-            { TroopType.LaserRifle, rifleMan }
-            //{ TroopType.GranadeLauncher, grenadeLauncherPrefab },
-            //{ TroopType.TankRobot, tankRobotPrefab }
-        };
-    }
-
-    void Update()
-    {
-
-    }
-
     public void SpawnTroop(TroopType troopType, int index)
     {
-        GameObject troopPrefab = GetTroopPrefab(troopType);
+        GameObject troopPrefab = troopPrefabs[(int)troopType];
         if (troopPrefab != null)
         {
             Instantiate(troopPrefab, spawnPositions[index].position, Quaternion.Euler(0, 90, 0));
             troopPrefab.GetComponent<NpcStats>().laneIndex = index;
-            laneManager.AddTroop(troopPrefab.transform, index);
-        }
-    }
-
-    public GameObject GetTroopPrefab(TroopType troopType)
-    {
-        if (troopDictionary.TryGetValue(troopType, out GameObject prefab))
-        {
-            return prefab;
-        }
-        else
-        {
-            Debug.LogError($"TroopType {troopType} i�in prefab bulunamad�!");
-            return null;
+            //laneManager.AddTroop(troopPrefab.transform, index);
         }
     }
 }

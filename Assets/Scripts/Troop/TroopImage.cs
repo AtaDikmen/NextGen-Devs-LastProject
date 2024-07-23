@@ -9,12 +9,10 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     private TroopType type;
     private Transform originalParent;
-    private Renderer troopRenderer;
     private GameObject childObject;
 
     void Awake()
     {
-        troopRenderer = GetComponentInChildren<Renderer>();
         childObject = transform.GetChild(0).gameObject;
     }
 
@@ -28,20 +26,16 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     private void UpdateTroopObject()
     {
-        // Destroy the current child object if it exists
         if (childObject != null)
         {
             Destroy(childObject);
         }
 
-        // Instantiate the appropriate prefab based on the troop type
         GameObject prefab = GridManager.Instance.troopImagePrefabs[(int)type];
         childObject = Instantiate(prefab, transform);
         childObject.transform.localPosition = Vector3.zero;
         childObject.transform.localRotation = Quaternion.identity;
 
-        // Update the troop renderer reference
-        troopRenderer = childObject.GetComponent<Renderer>();
     }
 
 
@@ -74,6 +68,15 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             if (result.gameObject != gameObject && result.gameObject.CompareTag("TroopImage"))
             {
                 otherTroop = result.gameObject.GetComponent<TroopImage>();
+                if (otherTroop.GetChildObject() != null && otherTroop.type == type && otherTroop.type != TroopType.TankRobot)
+                {
+                    MergeWith(otherTroop);
+                }
+                else if (otherTroop.GetChildObject() != null && otherTroop.type != type)
+                {
+                    AudioClip declineMergeSFX = Resources.Load<AudioClip>("Decline2");
+                    AudioManager.Instance.PlaySFX(declineMergeSFX);
+                }
                 break;
             }
             else if (result.gameObject != gameObject && result.gameObject.CompareTag("Lane"))
@@ -82,18 +85,7 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
                 Debug.Log("Deployed to lane!");
                 break;
             }
-            else if (result.gameObject != gameObject)
-            {
-                AudioClip declineMergeSFX = Resources.Load<AudioClip>("Decline2");
-                AudioManager.Instance.PlaySFX(declineMergeSFX);
-                break;
-            }
 
-        }
-
-        if (otherTroop != null && otherTroop.type == type && otherTroop.type != TroopType.TankRobot)
-        {
-            MergeWith(otherTroop);
         }
 
         UpdateGridLayout();
@@ -135,11 +127,10 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         if (otherTroop.GetChildObject().activeSelf && childObject.activeSelf)
         {
             DeactivateTroopImage();
-            // Update the other troop's appearance to reflect the new tier
             otherTroop.type += 1;
             otherTroop.UpdateTroopObject();
             AudioClip mergeSFX = Resources.Load<AudioClip>("MergeLvl" + (int)otherTroop.type);
-            AudioManager.Instance.PlaySFX(mergeSFX,1f);
+            AudioManager.Instance.PlaySFX(mergeSFX, 1f);
         }
     }
 
