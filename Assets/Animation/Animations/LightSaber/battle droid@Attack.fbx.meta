@@ -304,7 +304,7 @@ ModelImporter:
         length: 0
         modified: 0
     - boneName: mixamorig:RightHandIndex1
-      humanName: Right Index Proximal
+      humanName: Right Little Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
         max: {x: 0, y: 0, z: 0}
@@ -312,7 +312,7 @@ ModelImporter:
         length: 0
         modified: 0
     - boneName: mixamorig:RightHandIndex2
-      humanName: Right Index Intermediate
+      humanName: Right Little Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
         max: {x: 0, y: 0, z: 0}
@@ -320,7 +320,7 @@ ModelImporter:
         length: 0
         modified: 0
     - boneName: mixamorig:RightHandIndex3
-      humanName: Right Index Distal
+      humanName: Right Little Distal
       limit:
         min: {x: 0, y: 0, z: 0}
         max: {x: 0, y: 0, z: 0}
@@ -336,384 +336,179 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: battle droid(Clone)
+    - name: battle droid 2(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Plane.219
-      parentName: battle droid(Clone)
-      position: {x: -1.1360452, y: 8.079854, z: -1.3170722}
-      rotation: {x: 0.0000025463569, y: 0.9336466, z: 0.3581955, w: -0.00000663715}
-      scale: {x: 1.4831066, y: 1.4831065, z: 1.4831065}
-    - name: Cylinder.486
-      parentName: battle droid(Clone)
-      position: {x: -1.1220309, y: -0.8907453, z: 0.45785332}
-      rotation: {x: -0.0013971056, y: 0.9999977, z: 0.000010627876, w: 0.0016537327}
-      scale: {x: 1.4831065, y: 1.483107, z: 1.4831066}
-    - name: Cylinder.485
-      parentName: battle droid(Clone)
-      position: {x: -1.1250606, y: -0.89309174, z: 0.4579813}
-      rotation: {x: -0.0013970312, y: 0.9999977, z: 0.0000000116253664, w: 0.0016536284}
-      scale: {x: 1.4831067, y: 1.4831067, z: 1.4831069}
-    - name: Plane.218
-      parentName: battle droid(Clone)
-      position: {x: -1.0866073, y: -0.8915177, z: 0.43767855}
-      rotation: {x: -0.0009473399, y: 0.99994874, z: 0.000026287284, w: -0.010084445}
-      scale: {x: 1.4831065, y: 1.4831067, z: 1.4831065}
-    - name: Plane.217
-      parentName: battle droid(Clone)
-      position: {x: -1.0866078, y: -0.89151806, z: 0.43767375}
-      rotation: {x: -0.000947354, y: 0.99994874, z: 0.000026744494, w: -0.010084446}
-      scale: {x: 1.483106, y: 1.4831067, z: 1.4831063}
-    - name: Cylinder.484
-      parentName: battle droid(Clone)
-      position: {x: -1.1677052, y: -0.91469836, z: 0.41160095}
-      rotation: {x: 0.0040360303, y: 0.99998206, z: 0.0040648766, w: -0.0017520479}
-      scale: {x: 1.4831067, y: 1.4831072, z: 1.4831065}
-    - name: Cylinder.483
-      parentName: battle droid(Clone)
-      position: {x: -1.1827205, y: -0.89288014, z: 0.45672908}
-      rotation: {x: 0.0040347916, y: 0.99999183, z: 0.00008781183, w: 0.00017602651}
-      scale: {x: 1.483107, y: 1.483107, z: 1.4831067}
-    - name: Plane.216
-      parentName: battle droid(Clone)
-      position: {x: -1.1360257, y: -0.8932755, z: 0.45776263}
-      rotation: {x: -3.4955174e-11, y: 1, z: -0.000000024139428, w: -0.000007108846}
-      scale: {x: 1.4831064, y: 1.4831067, z: 1.4831064}
-    - name: Cylinder.482
-      parentName: battle droid(Clone)
-      position: {x: -1.1584158, y: -0.89063615, z: 0.45769003}
-      rotation: {x: -0.0012831157, y: 0.000008530506, z: 0.9999978, w: 0.0016756873}
-      scale: {x: -1.4831067, y: -1.483107, z: -1.4831069}
-    - name: Cylinder.481
-      parentName: battle droid(Clone)
-      position: {x: -1.1606572, y: -0.89304847, z: 0.4575884}
-      rotation: {x: -0.001283033, y: 0.000000014620196, z: 0.9999978, w: 0.0016756763}
-      scale: {x: -1.4831065, y: -1.4831066, z: -1.4831065}
-    - name: Plane.215
-      parentName: battle droid(Clone)
-      position: {x: -1.0984037, y: -0.8945335, z: 0.47221056}
-      rotation: {x: 0.0076249084, y: 0.00002035696, z: 0.9999707, w: -0.0007161392}
-      scale: {x: -1.4831065, y: -1.4831069, z: -1.4831065}
-    - name: Plane.214
-      parentName: battle droid(Clone)
-      position: {x: -1.0984037, y: -0.8945349, z: 0.4722074}
-      rotation: {x: 0.007624909, y: 0.00002009486, z: 0.9999707, w: -0.00071613723}
-      scale: {x: -1.4831066, y: -1.4831073, z: -1.483106}
-    - name: Cylinder.480
-      parentName: battle droid(Clone)
-      position: {x: -1.0698484, y: -0.892345, z: 0.49276125}
-      rotation: {x: 0.0013102182, y: 0.0030929008, z: 0.99997884, w: -0.005576788}
-      scale: {x: -1.4831067, y: -1.4831067, z: -1.483107}
-    - name: Cylinder.479
-      parentName: battle droid(Clone)
-      position: {x: -1.0729576, y: -0.8918826, z: 0.4586924}
-      rotation: {x: -0.00015687419, y: 0.00007859414, z: 0.99998444, w: -0.0055760485}
-      scale: {x: -1.4831067, y: -1.4831065, z: -1.4831065}
-    - name: Plane.213
-      parentName: battle droid(Clone)
-      position: {x: -1.1360257, y: -0.8932754, z: 0.45776293}
-      rotation: {x: 0.0000070771475, y: 0.000000034104435, z: 1, w: -0.00000007549814}
-      scale: {x: -1.4831067, y: -1.4831069, z: -1.4831069}
-    - name: Plane.212
-      parentName: battle droid(Clone)
-      position: {x: -1.1376998, y: 5.333521, z: -1.3797433}
-      rotation: {x: 0.000002546357, y: 0.9336466, z: 0.35819548, w: -0.00000663715}
-      scale: {x: 1.4831067, y: 1.4831065, z: 1.4831067}
-    - name: Plane.211
-      parentName: battle droid(Clone)
-      position: {x: -3.7256367, y: 7.831739, z: -1.7231392}
-      rotation: {x: -4.882904e-13, y: 1, z: -5.8686594e-10, w: -0.000007108846}
-      scale: {x: 1.4831067, y: 1.4831071, z: 1.4831071}
-    - name: Plane.210
-      parentName: battle droid(Clone)
-      position: {x: -3.7270184, y: 5.100877, z: -1.5025166}
-      rotation: {x: 5.3415612e-14, y: 1, z: 4.0191912e-11, w: -0.000007108846}
-      scale: {x: 1.6018418, y: 1.6018418, z: 1.6018418}
-    - name: Cylinder.478
-      parentName: battle droid(Clone)
-      position: {x: -3.3057039, y: 8.633279, z: -1.7223182}
-      rotation: {x: -0.0000004358635, y: 1, z: 3.315333e-12, w: -0.000007108846}
-      scale: {x: 1.4831067, y: 1.4831066, z: 1.4831066}
-    - name: Cylinder.477
-      parentName: battle droid(Clone)
-      position: {x: -3.0567837, y: 8.63328, z: -1.7223227}
-      rotation: {x: -0.00000035833807, y: 1, z: 2.6969405e-12, w: -0.000007108846}
-      scale: {x: 1.4831066, y: 1.4831066, z: 1.4831066}
-    - name: Cylinder.476
-      parentName: battle droid(Clone)
-      position: {x: -3.3173003, y: 8.099949, z: -1.7223184}
-      rotation: {x: 0.0038562224, y: 0.9999926, z: -0.000000030859706, w: -0.0000071090185}
-      scale: {x: 1.4831069, y: 1.4831066, z: 1.4831067}
-    - name: Cylinder.475
-      parentName: battle droid(Clone)
-      position: {x: -3.0449448, y: 8.181246, z: -1.722324}
-      rotation: {x: 0.0018255399, y: 0.99999833, z: -0.000000017221462, w: -0.0000071088893}
-      scale: {x: 1.483107, y: 1.483107, z: 1.4831066}
-    - name: Plane.209
-      parentName: battle droid(Clone)
-      position: {x: 1.3733897, y: 7.83174, z: -1.7232088}
-      rotation: {x: 0.0000070770593, y: 5.874003e-10, z: 1, w: -0.0000000754979}
-      scale: {x: -1.4831067, y: -1.4831071, z: -1.4831071}
-    - name: Plane.208
-      parentName: battle droid(Clone)
-      position: {x: 1.4399455, y: 5.1090665, z: -1.4594102}
-      rotation: {x: 0.000007077074, y: 5.3637794e-10, z: 1, w: -0.0000000754979}
-      scale: {x: -1.4831069, y: -1.4831069, z: -1.4831071}
-    - name: Cylinder.474
-      parentName: battle droid(Clone)
-      position: {x: 1.0335937, y: 8.633277, z: -1.7223778}
-      rotation: {x: 0.000007075907, y: 1.2562919e-12, z: 1, w: 0.0000000754979}
-      scale: {x: -1.4831067, y: -1.4831066, z: -1.4831066}
-    - name: Cylinder.473
-      parentName: battle droid(Clone)
-      position: {x: 0.7846723, y: 8.633281, z: -1.7223754}
-      rotation: {x: 0.0000070770598, y: 4.959769e-13, z: 1, w: -0.0000000754979}
-      scale: {x: -1.4831066, y: -1.4831066, z: -1.4831066}
-    - name: Cylinder.472
-      parentName: battle droid(Clone)
-      position: {x: 1.04519, y: 8.099941, z: -1.7223786}
-      rotation: {x: 0.0000070673022, y: -0.000000026522274, z: 0.9999926, w: -0.0038562482}
-      scale: {x: -1.4831069, y: -1.4831069, z: -1.4831067}
-    - name: Cylinder.471
-      parentName: battle droid(Clone)
-      position: {x: 0.7728332, y: 8.181244, z: -1.7223758}
-      rotation: {x: 0.000007088993, y: -0.0000000172579, z: 0.99999833, w: -0.0018255264}
-      scale: {x: -1.483107, y: -1.483107, z: -1.4831066}
-    - name: Cylinder.470
-      parentName: battle droid(Clone)
-      position: {x: 1.5117544, y: 3.511124, z: -1.2465309}
-      rotation: {x: 0.00083708647, y: -0.68404126, z: 0.7294428, w: 0.00027957174}
-      scale: {x: 0.36390677, y: 0.36390677, z: 0.3639068}
-    - name: Cylinder.469
-      parentName: battle droid(Clone)
-      position: {x: 1.3036811, y: 2.5905688, z: -1.0942479}
-      rotation: {x: 0.0000051835873, y: -0.6736374, z: 0.739062, w: 0.00000482687}
-      scale: {x: 2.0206852, y: 1.7098901, z: 2.0206854}
-    - name: Cylinder.468
-      parentName: battle droid(Clone)
-      position: {x: 1.2547152, y: 2.4880505, z: -1.0972779}
-      rotation: {x: 0.0000051588895, y: -0.6736374, z: 0.739062, w: 0.000004804359}
-      scale: {x: 2.020685, y: 1.7098899, z: 2.0206847}
-    - name: Cylinder.467
-      parentName: battle droid(Clone)
-      position: {x: 1.4187527, y: 3.121406, z: -1.1425704}
-      rotation: {x: 0.000005277198, y: -0.6736374, z: 0.739062, w: 0.0000047078865}
-      scale: {x: 2.0206854, y: 1.7098902, z: 2.0206852}
-    - name: Cylinder.466
-      parentName: battle droid(Clone)
-      position: {x: 1.3036764, y: 2.5539904, z: -1.4883143}
-      rotation: {x: 0.0000052772066, y: -0.6736374, z: 0.739062, w: 0.0000047078943}
-      scale: {x: 2.0206852, y: 1.7098901, z: 2.0206847}
-    - name: Cylinder.465
-      parentName: battle droid(Clone)
-      position: {x: 1.2547092, y: 2.4514728, z: -1.4913441}
-      rotation: {x: 0.000005296493, y: -0.6736374, z: 0.739062, w: 0.0000047254734}
-      scale: {x: 2.020685, y: 1.7098899, z: 2.020685}
-    - name: Cylinder.464
-      parentName: battle droid(Clone)
-      position: {x: 1.4187478, y: 3.0848272, z: -1.5366366}
-      rotation: {x: 0.00000517417, y: -0.6736374, z: 0.739062, w: 0.000004818286}
-      scale: {x: 2.0206854, y: 1.7098902, z: 2.0206852}
-    - name: Cylinder.463
-      parentName: battle droid(Clone)
-      position: {x: 0.908701, y: 2.9366734, z: -1.096512}
-      rotation: {x: 0.6463933, y: -0.20804834, z: -0.18963948, w: 0.7091745}
-      scale: {x: 1.835165, y: 1.618253, z: 1.8351651}
-    - name: Cylinder.462
-      parentName: battle droid(Clone)
-      position: {x: 0.8961773, y: 2.8363771, z: -1.0753279}
-      rotation: {x: 0.6463933, y: -0.20804834, z: -0.18963951, w: 0.7091746}
-      scale: {x: 1.8351645, y: 1.6182525, z: 1.835165}
-    - name: Cylinder.460
-      parentName: battle droid(Clone)
-      position: {x: 1.119336, y: 3.3887591, z: -1.143388}
-      rotation: {x: 0.61595976, y: -0.29920796, z: -0.27272886, w: 0.6757864}
-      scale: {x: 1.8351653, y: 1.6182526, z: 1.8351654}
-    - name: Plane.207
-      parentName: battle droid(Clone)
-      position: {x: -2.8119423, y: 9.243004, z: -0.4114107}
-      rotation: {x: -1.2324095e-12, y: 1, z: -8.866579e-14, w: -0.000007108846}
-      scale: {x: 1.4831067, y: 1.4831069, z: 1.4831067}
-    - name: Plane.206
-      parentName: battle droid(Clone)
-      position: {x: -2.829064, y: 9.633416, z: -0.5750983}
-      rotation: {x: -1.2324095e-12, y: 1, z: -8.866579e-14, w: -0.000007108846}
-      scale: {x: 1.4831067, y: 1.4831069, z: 1.4831067}
-    - name: Plane.205
-      parentName: battle droid(Clone)
-      position: {x: 0.53986555, y: 9.243006, z: -0.41145605}
-      rotation: {x: 0.000000010040688, y: 1, z: 3.8675917e-14, w: -0.000007108846}
-      scale: {x: 1.4831067, y: 1.4831067, z: 1.4831067}
-    - name: Plane.204
-      parentName: battle droid(Clone)
-      position: {x: 0.55698246, y: 9.633415, z: -0.57514477}
-      rotation: {x: 0.000000010040688, y: 1, z: 3.8675917e-14, w: -0.000007108846}
-      scale: {x: 1.4831067, y: 1.4831067, z: 1.4831067}
+      parentName: battle droid 2(Clone)
+      position: {x: 3.439034e-11, y: 0, z: -6.443217e-13}
+      rotation: {x: 6.0656115e-17, y: 0.99995613, z: -6.0656115e-17, w: -0.00936657}
+      scale: {x: 1.4831067, y: 1.4831064, z: 1.4831067}
     - name: mixamorig:Hips
-      parentName: battle droid(Clone)
-      position: {x: 0, y: 5.9132266, z: -0.0013910532}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      parentName: battle droid 2(Clone)
+      position: {x: -0.02524058, y: 6.1184826, z: 0.22795388}
+      rotation: {x: 3.6206755e-24, y: 0.000000001673036, z: -4.5930058e-24, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:Spine
       parentName: mixamorig:Hips
-      position: {x: -0, y: 0.678468, z: -0.07229789}
-      rotation: {x: -0.053055007, y: 0, z: -0, w: 0.9985916}
+      position: {x: -0, y: 0.6408765, z: -0.063701056}
+      rotation: {x: -0.049515415, y: -4.8138804e-10, z: 5.557118e-11, w: 0.9987734}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:Spine1
       parentName: mixamorig:Spine
-      position: {x: -0, y: 0.7960261, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
+      position: {x: -0, y: 0.7513736, z: 0}
+      rotation: {x: -0.00000007823109, y: -1.3746469e-10, z: -5.2742078e-11, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:Spine2
       parentName: mixamorig:Spine1
-      position: {x: -0, y: 0.9097455, z: 1.4210854e-16}
+      position: {x: -0, y: 0.8587121, z: 1.4210854e-16}
+      rotation: {x: -0, y: -5.5511145e-17, z: -3.8151237e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:Neck
+      parentName: mixamorig:Spine2
+      position: {x: -0, y: 0.96605176, z: 0.000000115365644}
+      rotation: {x: -0.16018713, y: 6.44224e-10, z: -5.7774413e-10, w: 0.98708665}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:Head
+      parentName: mixamorig:Neck
+      position: {x: -0, y: 0.021021118, z: 0.02646015}
+      rotation: {x: -0, y: -0, z: -6.162976e-33, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:HeadTop_End
+      parentName: mixamorig:Head
+      position: {x: -0, y: 0.44543824, z: 0.5606918}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:LeftShoulder
       parentName: mixamorig:Spine2
-      position: {x: -0.899816, y: 0.9029113, z: 0.044394996}
-      rotation: {x: 0.54304606, y: -0.45568803, z: 0.51684177, w: 0.4799208}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: -0.89665794, y: 0.85606474, z: 0.05018155}
+      rotation: {x: 0.5473442, y: -0.4526164, z: 0.5176336, w: 0.47708297}
+      scale: {x: 1, y: 1.0000001, z: 1}
     - name: mixamorig:LeftArm
       parentName: mixamorig:LeftShoulder
-      position: {x: -2.842171e-16, y: 1.8051547, z: 1.1368684e-15}
-      rotation: {x: -0.05627843, y: -0.1286255, z: 0.022849975, w: 0.9898314}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: -1.4210854e-16, y: 1.8214995, z: 0}
+      rotation: {x: -0.059295632, y: -0.18125318, z: 0.034384932, w: 0.9810449}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
     - name: mixamorig:LeftForeArm
       parentName: mixamorig:LeftArm
-      position: {x: -0, y: 2.1122413, z: 0}
-      rotation: {x: -0.02285734, y: 0.0060265353, z: -0.03192481, w: 0.9992107}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: -0, y: 1.9893343, z: 2.842171e-16}
+      rotation: {x: -0.012398475, y: 0.0080595445, z: -0.033765115, w: 0.9993204}
+      scale: {x: 1, y: 1.0000004, z: 0.9999999}
     - name: mixamorig:LeftHand
       parentName: mixamorig:LeftForeArm
-      position: {x: 1.4210854e-16, y: 3.0835342, z: 5.684342e-16}
-      rotation: {x: 0.06333098, y: 0.00044614644, z: 0.007030363, w: 0.9979677}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: 7.105427e-17, y: 3.117805, z: 0}
+      rotation: {x: 0.017367888, y: 0.0003813873, z: 0.021953335, w: 0.9996081}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000004}
     - name: mixamorig:LeftHandIndex1
       parentName: mixamorig:LeftHand
-      position: {x: -0, y: 0.6270466, z: 0}
-      rotation: {x: -0.048973497, y: 0.0016165035, z: -0.032950126, w: 0.99825513}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: -3.5527136e-17, y: 0.7883896, z: 0}
+      rotation: {x: 0.025366947, y: -0.010370055, z: -0.07382139, w: 0.99689484}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
     - name: mixamorig:LeftHandIndex2
       parentName: mixamorig:LeftHandIndex1
-      position: {x: -0, y: 0.13289902, z: 0}
-      rotation: {x: -0.16312853, y: -0.0000008090865, z: 0.17235163, w: 0.971434}
+      position: {x: -0, y: 0.1217587, z: 0}
+      rotation: {x: -0.31505376, y: -0.0000005979089, z: -0.07606936, w: 0.9460204}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:LeftHandIndex3
       parentName: mixamorig:LeftHandIndex2
-      position: {x: 0.05195967, y: 0.11962041, z: 0.049179647}
-      rotation: {x: 0.28975677, y: -0.099325776, z: -0.0645445, w: 0.94974184}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: -0.01893311, y: 0.09350795, z: 0.078413464}
+      rotation: {x: 0.39362878, y: 0.073196456, z: 0.0077565815, w: 0.91631794}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000004}
     - name: mixamorig:LeftHandIndex4
       parentName: mixamorig:LeftHandIndex3
-      position: {x: 0.010411468, y: 0.038847484, z: -0.013041442}
+      position: {x: -0.009669905, y: 0.05304029, z: -0.0097966}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:RightShoulder
       parentName: mixamorig:Spine2
-      position: {x: 0.899816, y: 0.90490705, z: 0.02566589}
-      rotation: {x: 0.5371462, y: 0.4612516, z: -0.52197677, w: 0.47566918}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: 0.89665794, y: 0.85545903, z: 0.05627529}
+      rotation: {x: 0.54923874, y: 0.4508565, z: -0.5159143, w: 0.47843245}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
     - name: mixamorig:RightArm
       parentName: mixamorig:RightShoulder
-      position: {x: -0, y: 1.803171, z: 0}
-      rotation: {x: -0.055910263, y: 0.1306539, z: -0.03323782, w: 0.9892921}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: -0, y: 1.8223585, z: 0}
+      rotation: {x: -0.05590806, y: 0.2214325, z: -0.05022105, w: 0.9722756}
+      scale: {x: 1.0000004, y: 1.0000006, z: 1.0000004}
     - name: mixamorig:RightForeArm
       parentName: mixamorig:RightArm
-      position: {x: -0, y: 2.1089966, z: 1.4210854e-16}
-      rotation: {x: -0.0229866, y: -0.005615652, z: 0.03208548, w: 0.999205}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: -2.842171e-16, y: 2.0118592, z: -2.842171e-16}
+      rotation: {x: -0.011259428, y: -0.010399594, z: 0.032417964, w: 0.99935687}
+      scale: {x: 1, y: 0.9999998, z: 1.0000001}
     - name: mixamorig:RightHand
       parentName: mixamorig:RightForeArm
-      position: {x: -1.4210854e-16, y: 3.0857947, z: 0}
-      rotation: {x: 0.045050435, y: 0.0047737556, z: 0.10526656, w: 0.99341166}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: 7.105427e-17, y: 3.1220355, z: 0}
+      rotation: {x: -0.004103123, y: 0.00071662833, z: -0.17204961, w: 0.98507947}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000002}
     - name: mixamorig:RightHandIndex1
       parentName: mixamorig:RightHand
-      position: {x: -0, y: 0.7384932, z: 0}
-      rotation: {x: -0.0024259824, y: 0.00023494277, z: -0.08267218, w: 0.9965738}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: 1.4210854e-16, y: 0.68155915, z: 0}
+      rotation: {x: 0.061944723, y: 0.0035821213, z: 0.057619978, w: 0.9964085}
+      scale: {x: 1, y: 1.0000005, z: 1.0000002}
     - name: mixamorig:RightHandIndex2
       parentName: mixamorig:RightHandIndex1
-      position: {x: 1.4210854e-16, y: 0.17605716, z: -2.842171e-16}
-      rotation: {x: -0.06966658, y: -0.00000002227898, z: 0.008133233, w: 0.9975372}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: -7.105427e-17, y: 0.27603218, z: -5.684342e-16}
+      rotation: {x: -0.040074904, y: -0.00000006984918, z: -0.044009082, w: 0.998227}
+      scale: {x: 1.0000002, y: 1, z: 0.99999994}
     - name: mixamorig:RightHandIndex3
       parentName: mixamorig:RightHandIndex2
-      position: {x: 0.008400911, y: 0.3289387, z: 0.07196225}
-      rotation: {x: -0.06745168, y: -0.010180368, z: 0.05440871, w: 0.9961859}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: -0.05652704, y: 0.38397452, z: 0.05147226}
+      rotation: {x: -0.022785837, y: 0.0140841575, z: -0.13008615, w: 0.9911408}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1}
     - name: mixamorig:RightHandIndex4
       parentName: mixamorig:RightHandIndex3
-      position: {x: 0.04590237, y: 0.22910166, z: 0.09977327}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: mixamorig:Neck
-      parentName: mixamorig:Spine2
-      position: {x: -0, y: 1.0234631, z: 0.000000011191281}
-      rotation: {x: -0.16838375, y: -0, z: -0, w: 0.9857215}
-      scale: {x: 1, y: 1, z: 1}
-    - name: mixamorig:Head
-      parentName: mixamorig:Neck
-      position: {x: -0, y: 0.034575194, z: 0.04559784}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: mixamorig:HeadTop_End
-      parentName: mixamorig:Head
-      position: {x: -0, y: 0.44893187, z: 0.59205395}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: mixamorig:RightUpLeg
-      parentName: mixamorig:Hips
-      position: {x: 0.6500033, y: -0.3764758, z: -0.01880455}
-      rotation: {x: -0.00014663542, y: -0.0026306938, z: 0.9984467, w: -0.055653624}
-      scale: {x: 1, y: 1, z: 1}
-    - name: mixamorig:RightLeg
-      parentName: mixamorig:RightUpLeg
-      position: {x: -3.5527136e-17, y: 2.863944, z: 0}
-      rotation: {x: -0.11834299, y: 0.007149548, z: -0.059878513, w: 0.99113995}
-      scale: {x: 1, y: 1, z: 1}
-    - name: mixamorig:RightFoot
-      parentName: mixamorig:RightLeg
-      position: {x: 3.5527136e-17, y: 2.3643382, z: 0}
-      rotation: {x: 0.61327016, y: -0.009494699, z: 0.0073726885, w: 0.7897818}
-      scale: {x: 1, y: 1, z: 1}
-    - name: mixamorig:RightToeBase
-      parentName: mixamorig:RightFoot
-      position: {x: -0, y: 0.7570978, z: 1.4210854e-16}
-      rotation: {x: 0.2513072, y: 0.030762535, z: -0.007991485, w: 0.9673854}
-      scale: {x: 1, y: 1, z: 1}
-    - name: mixamorig:RightToe_End
-      parentName: mixamorig:RightToeBase
-      position: {x: -0, y: 0.35325348, z: -8.881784e-18}
+      position: {x: -0.1427127, y: 0.2714223, z: 0.05438533}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:LeftUpLeg
       parentName: mixamorig:Hips
-      position: {x: -0.6500033, y: -0.3764758, z: 0.021586532}
-      rotation: {x: 0.0004567767, y: -0.00819573, z: 0.9984169, w: 0.055645276}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: -0.65950453, y: -0.35644957, z: 0.003929272}
+      rotation: {x: -0.0030673782, y: 0.052169025, z: 0.9969119, w: 0.0586153}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1}
     - name: mixamorig:LeftLeg
       parentName: mixamorig:LeftUpLeg
-      position: {x: -0, y: 2.8642857, z: 0}
-      rotation: {x: -0.10989238, y: -0.006636905, z: 0.059918296, w: 0.99211365}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: -2.842171e-16, y: 2.826809, z: 1.4210854e-16}
+      rotation: {x: -0.2340166, y: 0.13262379, z: 0.032241855, w: 0.96260464}
+      scale: {x: 1.0000002, y: 1.0000002, z: 0.9999999}
     - name: mixamorig:LeftFoot
       parentName: mixamorig:LeftLeg
-      position: {x: -0, y: 2.3609831, z: 0}
-      rotation: {x: 0.6049988, y: 0.00984819, z: -0.007483878, w: 0.79613036}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: 1.4210854e-16, y: 2.6451716, z: -1.4210854e-16}
+      rotation: {x: 0.6163061, y: -0.11966494, z: 0.09547146, w: 0.7724844}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000001}
     - name: mixamorig:LeftToeBase
       parentName: mixamorig:LeftFoot
-      position: {x: -0, y: 0.73653847, z: 0}
-      rotation: {x: 0.25858524, y: -0.030699503, z: 0.008222396, w: 0.9654655}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: -1.4210854e-16, y: 0.8142028, z: -1.0658141e-16}
+      rotation: {x: 0.2953494, y: -0.050284736, z: 0.015568709, w: 0.95393807}
+      scale: {x: 1.0000011, y: 1.0000008, z: 1.0000004}
     - name: mixamorig:LeftToe_End
       parentName: mixamorig:LeftToeBase
-      position: {x: 2.842171e-16, y: 0.35278976, z: -1.7763568e-17}
+      position: {x: -0, y: 0.35520625, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:RightUpLeg
+      parentName: mixamorig:Hips
+      position: {x: 0.65950453, y: -0.35644957, z: -0.026911525}
+      rotation: {x: 0.0016772449, y: 0.028417114, z: 0.99785817, w: -0.058895994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamorig:RightLeg
+      parentName: mixamorig:RightUpLeg
+      position: {x: -2.842171e-16, y: 2.816082, z: 0}
+      rotation: {x: -0.18375306, y: 0.01263338, z: -0.067416534, w: 0.9805765}
+      scale: {x: 1.0000001, y: 0.9999999, z: 0.9999999}
+    - name: mixamorig:RightFoot
+      parentName: mixamorig:RightLeg
+      position: {x: -0, y: 2.6091063, z: 7.105427e-17}
+      rotation: {x: 0.61283726, y: 0.00096681423, z: -0.0007497942, w: 0.7902082}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.0000002}
+    - name: mixamorig:RightToeBase
+      parentName: mixamorig:RightFoot
+      position: {x: -1.4210854e-16, y: 0.83001006, z: -3.5527136e-17}
+      rotation: {x: 0.2895778, y: 0.051644806, z: -0.015649542, w: 0.95563203}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: mixamorig:RightToe_End
+      parentName: mixamorig:RightToeBase
+      position: {x: -1.4210854e-16, y: 0.35283884, z: 4.440892e-18}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
@@ -728,7 +523,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: a31f210d357f10745955ca8bb0c49d40,
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: cea9aba0de7f84646ae1a4c58bfa4161,
     type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3

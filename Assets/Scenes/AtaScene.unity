@@ -3491,15 +3491,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3129142314935707501, guid: d5df3650fbe20ae479936cb32595ca3a,
-        type: 3}
-      propertyPath: moveSpeed
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8062302912614314950, guid: d5df3650fbe20ae479936cb32595ca3a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.84
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8062302912614314950, guid: d5df3650fbe20ae479936cb32595ca3a,
         type: 3}
@@ -5721,7 +5716,7 @@ PrefabInstance:
     - target: {fileID: 8062302912614314950, guid: d5df3650fbe20ae479936cb32595ca3a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 29.61
+      value: 11.27
       objectReference: {fileID: 0}
     - target: {fileID: 8062302912614314950, guid: d5df3650fbe20ae479936cb32595ca3a,
         type: 3}
@@ -5731,7 +5726,7 @@ PrefabInstance:
     - target: {fileID: 8062302912614314950, guid: d5df3650fbe20ae479936cb32595ca3a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8062302912614314950, guid: d5df3650fbe20ae479936cb32595ca3a,
         type: 3}
@@ -5938,6 +5933,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tank
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592870715156698518, guid: ee0ac970cb61206488dfc0111b97cefa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
