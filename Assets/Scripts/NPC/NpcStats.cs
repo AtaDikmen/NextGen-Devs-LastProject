@@ -34,6 +34,6 @@ public class NpcStats : MonoBehaviour
 
     protected virtual void Die()
     {
-        laneManager.RemoveTroop(transform, laneIndex);
+        //laneManager.RemoveTroop(transform, laneIndex);
     }
 }
