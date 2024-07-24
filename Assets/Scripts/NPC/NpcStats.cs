@@ -13,11 +13,12 @@ public class NpcStats : MonoBehaviour
 
     [SerializeField] private float currentHealth;
     [SerializeField] private LaneManager laneManager;
+    private HealthBar healthBar;
 
     protected virtual void Start()
     {
         laneManager = FindObjectOfType<LaneManager>();
-
+        healthBar = GetComponentInChildren<HealthBar>();
         //currentHealth = maxHealth.GetValue();
         currentHealth = characterStatsSO.maxHealth.GetValue();
     }
@@ -32,7 +33,7 @@ public class NpcStats : MonoBehaviour
     public virtual void TakeDamage(int _damage)
     {
         currentHealth -= _damage;
-
+        UpdateHealth(currentHealth, characterStatsSO.maxHealth.GetValue());
         if (currentHealth <= 0)
             Die();
     }
@@ -40,5 +41,12 @@ public class NpcStats : MonoBehaviour
     protected virtual void Die()
     {
         laneManager.RemoveTroop(transform, laneIndex);
+    }
+
+    public void UpdateHealth(float currentHealth, float maxHealth)
+    {
+        healthBar.ShowHealthBarTemporarily();
+        float healthNormalized = currentHealth / maxHealth;
+        healthBar.SetHealth(healthNormalized);
     }
 }
