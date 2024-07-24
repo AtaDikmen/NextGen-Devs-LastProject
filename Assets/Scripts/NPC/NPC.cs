@@ -56,7 +56,7 @@ public class NPC : MonoBehaviour
 
         SetTargetAndAlly();
     }
-    
+
     protected virtual void Update()
     {
         stateMachine.currentState.Update();
@@ -119,4 +119,5 @@ public class NPC : MonoBehaviour
     {
         Destroy(gameObject, 3f);
     }
+
 }
