@@ -40,6 +40,7 @@ public class NpcStats : MonoBehaviour
 
     protected virtual void Die()
     {
+        healthBar.gameObject.SetActive(false);
         laneManager.RemoveTroop(transform, laneIndex);
     }
 

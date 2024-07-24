@@ -71,7 +71,7 @@ public class Bomb : MonoBehaviour
 
         Instantiate(explosionVFX, transform.position, Quaternion.identity);
 
-        Collider[] colliders = Physics.OverlapSphere(transform.position, 2);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, 3);
         foreach (Collider nearbyObject in colliders)
         {
             if (bomber.whoIsTarget == (bomber.whoIsTarget | (1 << nearbyObject.gameObject.layer)))
