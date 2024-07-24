@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,9 +30,14 @@ public class UI_MainMenu : MonoBehaviour
         _panel.SetActive(true);
     }
 
-    public void LoadScene(int index)
+    public void LoadScene(string _difficulty)
     {
-        SceneManager.LoadScene(index);
+        if (Enum.TryParse(_difficulty, true, out GameModes gameMode))
+        {
+            GameManager.Instance.currentMode = gameMode;
+            SceneManager.LoadScene(1);
+
+        }
     }
 
     public void QuitGame()

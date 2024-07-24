@@ -23,11 +23,11 @@ public class EnemySpawner : MonoBehaviour
             enemyPowers[lane] = 0;
         }
 
-        if (GameManager.Instance.currentState == GameModes.medium)
+        if (GameManager.Instance.currentMode == GameModes.Normal)
         {
             spawnRate = 3.0f;
         }
-        else if (GameManager.Instance.currentState == GameModes.hard)
+        else if (GameManager.Instance.currentMode == GameModes.Hardcore)
         {
             spawnRate = 1.0f;
         }
@@ -43,17 +43,21 @@ public class EnemySpawner : MonoBehaviour
             enemy = Instantiate(enemyPrefabs[Random.Range(0,enemyPrefabs.Count)], spawnPositions[laneControllers.IndexOf(targetLane)].position, Quaternion.Euler(0, -90, 0));
 
             NpcStats npcStats = enemy.GetComponent<NpcStats>();
-            CharacterStatsSO characterStats = npcStats.characterStatsSO;
+
+            //Clone ScriptableObject to change stats only in enemy
+            CharacterStatsSO originalStats = npcStats.characterStatsSO;
+            CharacterStatsSO clonedStats = ScriptableObjectUtility.Clone(originalStats);
+            npcStats.characterStatsSO = clonedStats;
 
             float difficultyMultiplier = 1f;
 
-            if (GameManager.Instance.currentState == GameModes.easy)
+            if (GameManager.Instance.currentMode == GameModes.Easy)
                 difficultyMultiplier = 0.8f;
-            else if (GameManager.Instance.currentState == GameModes.hard)
+            else if (GameManager.Instance.currentMode == GameModes.Hardcore)
                 difficultyMultiplier = 1.5f;
 
-            characterStats.damage.SetValue(characterStats.damage.GetValue() * difficultyMultiplier);
-            characterStats.maxHealth.SetValue(characterStats.maxHealth.GetValue() * difficultyMultiplier);
+            clonedStats.damage.SetValue(clonedStats.damage.GetValue() * difficultyMultiplier);
+            clonedStats.maxHealth.SetValue(clonedStats.maxHealth.GetValue() * difficultyMultiplier);
 
             SetLayerAllChildren(enemy.transform, "BlueTeam");
             enemyCounts[targetLane]++;

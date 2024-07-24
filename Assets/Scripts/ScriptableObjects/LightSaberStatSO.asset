@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Lightsaber
   damage:
-    baseValue: 15
+    baseValue: 20
     modifiers: 
   maxHealth:
     baseValue: 150

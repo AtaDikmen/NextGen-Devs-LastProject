@@ -12,3 +12,12 @@ public class CharacterStatsSO : ScriptableObject
     public int power;
     public int laneIndex;
 }
+
+public static class ScriptableObjectUtility
+{
+    public static T Clone<T>(T original) where T : ScriptableObject
+    {
+        T clone = ScriptableObject.Instantiate(original);
+        return clone;
+    }
+}

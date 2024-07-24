@@ -16,6 +16,8 @@ public class NpcStats : MonoBehaviour
 
     protected virtual void Start()
     {
+        laneManager = FindObjectOfType<LaneManager>();
+
         //currentHealth = maxHealth.GetValue();
         currentHealth = characterStatsSO.maxHealth.GetValue();
     }
@@ -37,6 +39,6 @@ public class NpcStats : MonoBehaviour
 
     protected virtual void Die()
     {
-        //laneManager.RemoveTroop(transform, laneIndex);
+        laneManager.RemoveTroop(transform, laneIndex);
     }
 }
