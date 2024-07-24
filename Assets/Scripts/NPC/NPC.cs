@@ -15,6 +15,7 @@ public class NPC : MonoBehaviour
     public Rigidbody rb { get; private set; }
     public BoxCollider npcCollider { get; private set; }
     public NpcStats stats { get; private set; }
+    public NpcVFX vFX { get; private set; }
     #endregion
 
     [Header("Collision Info")]
@@ -51,6 +52,7 @@ public class NPC : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         npcCollider = GetComponent<BoxCollider>();
         stats = GetComponent<NpcStats>();
+        vFX = GetComponent<NpcVFX>();
 
         SetTargetAndAlly();
     }

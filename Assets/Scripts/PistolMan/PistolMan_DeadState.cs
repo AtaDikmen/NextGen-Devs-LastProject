@@ -15,6 +15,9 @@ public class PistolMan_DeadState : NpcState
     {
         base.Enter();
 
+        npc.vFX.PlayDeathVFX();
+
+
         AudioManager.Instance.PlaySFX(npc.deathSFX[Random.Range(0, npc.deathSFX.Length)], 0.5f);
 
         npc.npcCollider.enabled = false;
