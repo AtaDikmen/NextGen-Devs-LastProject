@@ -132,12 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36dbd86aaa67df549bd9bcba0ded7a8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage:
-    baseValue: 150
-    modifiers: 
-  maxHealth:
-    baseValue: 500
-    modifiers: 
+  characterStatsSO: {fileID: 11400000, guid: fd44947b15c6c8549906b68a227cc7ed, type: 2}
   power: 0
   laneIndex: 0
   currentHealth: 0

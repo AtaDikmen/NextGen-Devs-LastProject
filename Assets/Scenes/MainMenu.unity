@@ -280,7 +280,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 50737584}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 496661160}
+        m_TargetAssemblyTypeName: UI_MainMenu, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &50737584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,10 +497,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1062968731}
-  - {fileID: 337264728}
   - {fileID: 643831960}
   - {fileID: 50737582}
   - {fileID: 532556046}
+  - {fileID: 337264728}
   m_Father: {fileID: 496661159}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -965,7 +977,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 182523452}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1493831154}
+        m_TargetAssemblyTypeName: UI_MarketPlace, Assembly-CSharp
+        m_MethodName: UpgradeTroop
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LaserGunner
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &182523452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2977,7 +3001,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 532556048}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 496661160}
+        m_TargetAssemblyTypeName: UI_MainMenu, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &532556048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3233,7 +3269,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 560265205}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1493831154}
+        m_TargetAssemblyTypeName: UI_MarketPlace, Assembly-CSharp
+        m_MethodName: UpgradeTroop
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LaserRifle
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &560265205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3355,7 +3403,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 643831962}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 496661160}
+        m_TargetAssemblyTypeName: UI_MainMenu, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &643831962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4082,7 +4142,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 829626864}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1493831154}
+        m_TargetAssemblyTypeName: UI_MarketPlace, Assembly-CSharp
+        m_MethodName: UpgradeTroop
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Lightsaber
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &829626864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4273,7 +4345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &850079850
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5412,7 +5484,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1196921459}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1493831154}
+        m_TargetAssemblyTypeName: UI_MarketPlace, Assembly-CSharp
+        m_MethodName: UpgradeTroop
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Tank
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1196921459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6488,7 +6572,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1488766840}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1493831154}
+        m_TargetAssemblyTypeName: UI_MarketPlace, Assembly-CSharp
+        m_MethodName: UpgradeTroop
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Bomber
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1488766840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6538,13 +6634,14 @@ GameObject:
   - component: {fileID: 1493831151}
   - component: {fileID: 1493831153}
   - component: {fileID: 1493831152}
+  - component: {fileID: 1493831154}
   m_Layer: 5
   m_Name: MarketPlacePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1493831151
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6605,6 +6702,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1493831150}
   m_CullTransparentMesh: 1
+--- !u!114 &1493831154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493831150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbefce9f7f17274dbb3e5b5d7601b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterStats:
+  - {fileID: 11400000, guid: bbb7268fdb515414d827528545ef4a87, type: 2}
+  - {fileID: 11400000, guid: 19091035e667ef741aa297956768413d, type: 2}
+  - {fileID: 11400000, guid: 55a4d36ddd0c12847b577ec1babd9777, type: 2}
+  - {fileID: 11400000, guid: b6add6157e2441946baa8789cf1b1bd1, type: 2}
+  - {fileID: 11400000, guid: fd44947b15c6c8549906b68a227cc7ed, type: 2}
 --- !u!1 &1535591268
 GameObject:
   m_ObjectHideFlags: 0
