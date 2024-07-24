@@ -58,7 +58,7 @@ public class GridManager : MonoBehaviour
         if (tempSpawnCount > 0)
         {
             AudioClip declineMergeSFX = Resources.Load<AudioClip>("Spawn");
-            AudioManager.Instance.PlaySFX(declineMergeSFX);
+            AudioManager.Instance.PlaySFX(declineMergeSFX, transform);
         }
 
     }

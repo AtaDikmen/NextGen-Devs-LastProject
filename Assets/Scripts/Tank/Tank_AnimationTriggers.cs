@@ -27,6 +27,6 @@ public class Tank_AnimationTriggers : MonoBehaviour
 
     private void PlayRandomAttackSFX()
     {
-        AudioManager.Instance.PlaySFX(tank.attackSFX[Random.Range(0, tank.attackSFX.Length)], 0.5f);
+        AudioManager.Instance.PlaySFX(tank.attackSFX[Random.Range(0, tank.attackSFX.Length)], transform, 0.3f);
     }
 }

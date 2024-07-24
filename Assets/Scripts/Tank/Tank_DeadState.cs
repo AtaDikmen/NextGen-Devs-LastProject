@@ -16,7 +16,7 @@ public class Tank_DeadState : NpcState
 
         npc.vFX.PlayDeathVFX();
 
-        AudioManager.Instance.PlaySFX(npc.deathSFX[Random.Range(0, npc.deathSFX.Length)], 0.5f);
+        AudioManager.Instance.PlaySFX(npc.deathSFX[Random.Range(0, npc.deathSFX.Length)], npc.transform, 0.5f);
 
         npc.npcCollider.enabled = false;
     }

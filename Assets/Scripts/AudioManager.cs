@@ -54,12 +54,13 @@ public class AudioManager : MonoBehaviour
         return newSource;
     }
 
-    public void PlaySFX(AudioClip clip, float volume = 0.3f)
+    public void PlaySFX(AudioClip clip, Transform _position, float volume = 0.1f)
     {
         AudioSource source = GetAvailableAudioSource();
         source.clip = clip;
         source.volume = volume;
         source.gameObject.SetActive(true);
+        source.transform.position = _position.position;
         source.Play();
         StartCoroutine(DisableAfterPlaying(source));
     }

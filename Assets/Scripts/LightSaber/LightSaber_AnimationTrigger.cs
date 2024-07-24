@@ -27,6 +27,6 @@ public class LightSaber_AnimationTrigger : MonoBehaviour
 
     private void PlayRandomAttackSFX()
     {
-        AudioManager.Instance.PlaySFX(lightSaber.attackSFX[Random.Range(0, lightSaber.attackSFX.Length)]);
+        AudioManager.Instance.PlaySFX(lightSaber.attackSFX[Random.Range(0, lightSaber.attackSFX.Length)], transform);
     }
 }

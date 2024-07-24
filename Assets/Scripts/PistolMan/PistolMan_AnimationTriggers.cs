@@ -13,7 +13,7 @@ public class PistolMan_AnimationTriggers : MonoBehaviour
 
     private void AttackTrigger()
     {
-        AudioManager.Instance.PlaySFX(pistolMan.attackSFX[0], 0.2f);
+        AudioManager.Instance.PlaySFX(pistolMan.attackSFX[0], transform, .02f);
 
         RaycastHit hit;
         if (pistolMan.IsTargetDetected(out hit))

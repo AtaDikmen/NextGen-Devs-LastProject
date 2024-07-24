@@ -73,7 +73,7 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
                 else if (otherTroop.GetChildObject() != null && otherTroop.type != type)
                 {
                     AudioClip declineMergeSFX = Resources.Load<AudioClip>("Decline2");
-                    AudioManager.Instance.PlaySFX(declineMergeSFX);
+                    AudioManager.Instance.PlaySFX(declineMergeSFX, transform);
                 }
                 break;
             }
@@ -130,7 +130,7 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             ParticleSystem particle = otherTroop.GetComponentInChildren<ParticleSystem>();
             particle.Play();
             AudioClip mergeSFX = Resources.Load<AudioClip>("MergeLvl" + (int)otherTroop.type);
-            AudioManager.Instance.PlaySFX(mergeSFX, 1f);
+            AudioManager.Instance.PlaySFX(mergeSFX, transform, 1f);
         }
     }
     

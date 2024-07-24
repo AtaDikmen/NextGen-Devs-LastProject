@@ -25,6 +25,6 @@ public class Bomber_AnimationTriggers : MonoBehaviour
 
     private void PlayerBombThrowSound()
     {
-        AudioManager.Instance.PlaySFX(bomber.attackSFX[0]);
+        AudioManager.Instance.PlaySFX(bomber.attackSFX[0], transform);
     }
 }

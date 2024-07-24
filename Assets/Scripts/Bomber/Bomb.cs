@@ -67,7 +67,7 @@ public class Bomb : MonoBehaviour
 
         isExplode = true;
 
-        AudioManager.Instance.PlaySFX(explosionSFX, .5f);
+        AudioManager.Instance.PlaySFX(explosionSFX, transform, 0.2f);
 
         Instantiate(explosionVFX, transform.position, Quaternion.identity);
 
