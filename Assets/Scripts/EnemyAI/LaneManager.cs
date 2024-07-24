@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LaneManager : MonoBehaviour
 {
-    [SerializeField] private LaneController[] lanes;
+    [SerializeField] private List<LaneController> lanes;
 
     public void AddTroop(Transform troop, int laneIndex)
     {
@@ -19,5 +19,10 @@ public class LaneManager : MonoBehaviour
     public bool IsLaneEmpty(int laneIndex)
     {
         return lanes[laneIndex].troopTransforms.Count == 0;
+    }
+
+    public List<LaneController> GetLanes()
+    {
+        return lanes;
     }
 }

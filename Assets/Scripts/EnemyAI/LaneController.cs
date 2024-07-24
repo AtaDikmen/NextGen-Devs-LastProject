@@ -5,7 +5,7 @@ using UnityEngine;
 public class LaneController : MonoBehaviour
 {
     public List<Transform> troopTransforms = new List<Transform>();
-    private int totalPower;
+    public int totalPower;
 
     private void Start()
     {
@@ -26,5 +26,10 @@ public class LaneController : MonoBehaviour
     {
         troopTransforms.Remove(transform);
         totalPower -= transform.GetComponent<NpcStats>().power;
+    }
+
+    public bool IsLaneEmpty()
+    {
+        return troopTransforms.Count == 0;
     }
 }
