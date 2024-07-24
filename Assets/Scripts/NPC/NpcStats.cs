@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class NpcStats : MonoBehaviour
 {
-    public Stat damage;
-    public Stat maxHealth;
+    public CharacterStatsSO characterStatsSO;
+
+    //public Stat damage;
+    //public Stat maxHealth;
     public int power;
     public int laneIndex;
 
@@ -14,13 +16,14 @@ public class NpcStats : MonoBehaviour
 
     protected virtual void Start()
     {
-        currentHealth = maxHealth.GetValue();
+        //currentHealth = maxHealth.GetValue();
+        currentHealth = characterStatsSO.maxHealth.GetValue();
     }
 
     public virtual void DoDamage(NpcStats _targetStats)
     {
 
-        int totalDamage = damage.GetValue();
+        int totalDamage = characterStatsSO.damage.GetValue();
         _targetStats.TakeDamage(totalDamage);
     }
 

@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b0122c2bd4c3e4db49d46c806e27c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterStatsSO: {fileID: 11400000, guid: b6add6157e2441946baa8789cf1b1bd1, type: 2}
   damage:
     baseValue: 30
     modifiers: 
