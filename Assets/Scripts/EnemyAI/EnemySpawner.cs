@@ -8,6 +8,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private LaneManager laneManager;
     [SerializeField] private List<LaneController> laneControllers;
     [SerializeField] private Transform[] spawnPositions;
+    private float spawnRate;
     private Dictionary<LaneController, int> enemyCounts = new Dictionary<LaneController, int>(); // To keep track of how many enemies are in each lane
     private Dictionary<LaneController, int> enemyPowers = new Dictionary<LaneController, int>(); // To keep track of total enemy power in each lane
     private GameObject enemy;
@@ -22,7 +23,16 @@ public class EnemySpawner : MonoBehaviour
             enemyPowers[lane] = 0;
         }
 
-        InvokeRepeating("SpawnEnemy", 5.0f, 3.0f);
+        if (GameManager.Instance.currentState == GameModes.medium)
+        {
+            spawnRate = 3.0f;
+        }
+        else if (GameManager.Instance.currentState == GameModes.hard)
+        {
+            spawnRate = 1.0f;
+        }
+
+        InvokeRepeating("SpawnEnemy", 20.0f, spawnRate);
     }
 
     public void SpawnEnemy()
@@ -31,6 +41,19 @@ public class EnemySpawner : MonoBehaviour
         if (targetLane != null)
         {
             enemy = Instantiate(enemyPrefabs[Random.Range(0,enemyPrefabs.Count)], spawnPositions[laneControllers.IndexOf(targetLane)].position, Quaternion.Euler(0, -90, 0));
+            NpcStats npcStats = enemy.GetComponent<NpcStats>();
+            
+            if(GameManager.Instance.currentState == GameModes.easy)
+            {
+                npcStats.damage.SetValue(npcStats.damage.GetValue() * (0.8f));
+                npcStats.maxHealth.SetValue(npcStats.maxHealth.GetValue() * (0.8f));
+            }
+            else if (GameManager.Instance.currentState == GameModes.hard)
+            {
+                npcStats.damage.SetValue(npcStats.damage.GetValue() * (1.5f));
+                npcStats.maxHealth.SetValue(npcStats.maxHealth.GetValue() * (1.5f));
+            }
+            SetLayerAllChildren(enemy.transform, "BlueTeam");
             enemyCounts[targetLane]++;
             enemyPowers[targetLane] += enemy.GetComponent<NpcStats>().power;
         }
@@ -113,6 +136,15 @@ public class EnemySpawner : MonoBehaviour
         {
             enemyCounts[lane]--;
             enemyPowers[lane] -= enemy.GetComponent<NpcStats>().power;
+        }
+    }
+
+    void SetLayerAllChildren(Transform root, string layer)
+    {
+        var children = root.GetComponentsInChildren<Transform>();
+        foreach (var child in children)
+        {
+            child.gameObject.layer = LayerMask.NameToLayer(layer);
         }
     }
 }

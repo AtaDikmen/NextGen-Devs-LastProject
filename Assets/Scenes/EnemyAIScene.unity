@@ -1212,10 +1212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7208090a663f49c4c861da221ee4b4b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rifleMan: {fileID: 7908915051614006644, guid: 24e88f4a5099a1f4c9e8a93b6a86ee33,
-    type: 3}
-  lightSaber: {fileID: 2652287216522705083, guid: d5df3650fbe20ae479936cb32595ca3a,
-    type: 3}
+  troopPrefabs: []
   spawnPositions:
   - {fileID: 1234183609}
   - {fileID: 1009469887}
@@ -1446,6 +1443,51 @@ Transform:
   m_Children:
   - {fileID: 1609939532}
   m_Father: {fileID: 438376642}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1189838898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1189838900}
+  - component: {fileID: 1189838899}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1189838899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189838898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29d72881a38446141b0d0abdccc95447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 1
+--- !u!4 &1189838900
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189838898}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1190070916
 GameObject:
@@ -2865,3 +2907,4 @@ SceneRoots:
   - {fileID: 1620604009}
   - {fileID: 1051290723}
   - {fileID: 438376642}
+  - {fileID: 1189838900}

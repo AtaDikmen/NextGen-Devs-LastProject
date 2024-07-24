@@ -11,7 +11,7 @@ public class NpcStats : MonoBehaviour
     public int power;
     public int laneIndex;
 
-    [SerializeField] private int currentHealth;
+    [SerializeField] private float currentHealth;
     [SerializeField] private LaneManager laneManager;
 
     protected virtual void Start()
@@ -23,8 +23,8 @@ public class NpcStats : MonoBehaviour
     public virtual void DoDamage(NpcStats _targetStats)
     {
 
-        int totalDamage = characterStatsSO.damage.GetValue();
-        _targetStats.TakeDamage(totalDamage);
+        float totalDamage = characterStatsSO.damage.GetValue();
+        _targetStats.TakeDamage((int)totalDamage);
     }
 
     public virtual void TakeDamage(int _damage)
