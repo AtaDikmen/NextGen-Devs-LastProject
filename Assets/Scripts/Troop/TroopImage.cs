@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    [SerializeField] private ParticleSystem mergeVFX;
+
     private Spawner spawner;
 
     private TroopType type;
@@ -125,10 +127,13 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             DeactivateTroopImage();
             otherTroop.type += 1;
             otherTroop.UpdateTroopObject();
+            ParticleSystem particle = otherTroop.GetComponentInChildren<ParticleSystem>();
+            particle.Play();
             AudioClip mergeSFX = Resources.Load<AudioClip>("MergeLvl" + (int)otherTroop.type);
             AudioManager.Instance.PlaySFX(mergeSFX, 1f);
         }
     }
+    
 
     private void UpdateGridLayout()
     {
@@ -143,6 +148,8 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     public void ActivateChild()
     {
         childObject.SetActive(true);
+        ParticleSystem particle = childObject.GetComponentInChildren<ParticleSystem>();
+        particle.Play();
     }
     public void DeactivateChild()
     {

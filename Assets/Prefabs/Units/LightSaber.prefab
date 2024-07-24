@@ -160,6 +160,7 @@ GameObject:
   - component: {fileID: 3609687070488878530}
   - component: {fileID: 5691857144814913239}
   - component: {fileID: 8063475241617082737}
+  - component: {fileID: 2130034994724209925}
   m_Layer: 6
   m_Name: LightSaber
   m_TagString: Untagged
@@ -285,6 +286,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.3191317, y: 2.0097566, z: 1.2958994}
   m_Center: {x: -0.022616595, y: 1.007263, z: 0.11655623}
+--- !u!114 &2130034994724209925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2652287216522705083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4473192d474daef4bafb56c995c98ed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathVFX: {fileID: 8503047890900811357}
 --- !u!1 &5767998757711623130
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,7 +394,7 @@ PrefabInstance:
     - target: {fileID: 309908454665629572, guid: effb650189dc5714e9e9801b1cfb3991,
         type: 3}
       propertyPath: m_Intensity
-      value: 1.7378083
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 496487244642044104, guid: effb650189dc5714e9e9801b1cfb3991,
         type: 3}
@@ -540,6 +554,12 @@ PrefabInstance:
 --- !u!4 &8503047890900811356 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9027514048236820042, guid: effb650189dc5714e9e9801b1cfb3991,
+    type: 3}
+  m_PrefabInstance: {fileID: 813120953743042582}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8503047890900811357 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 9027514048236820043, guid: effb650189dc5714e9e9801b1cfb3991,
     type: 3}
   m_PrefabInstance: {fileID: 813120953743042582}
   m_PrefabAsset: {fileID: 0}

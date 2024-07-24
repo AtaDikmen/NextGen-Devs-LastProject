@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour
 {
-    public Bomber bomber;
+    private Bomber bomber;
     private Rigidbody rb;
     private Transform target;
+    private bool isExplode;
 
     private AudioClip explosionSFX;
+    private ParticleSystem explosionVFX;
 
     [Header("Parabolic Info")]
     private float flightDuration = 2.0f;
@@ -24,10 +26,11 @@ public class Bomb : MonoBehaviour
         explosionSFX = Resources.Load<AudioClip>("BombExplode");
     }
 
-    public void SetupBomb(Bomber _bomber, Transform _target)
+    public void SetupBomb(Bomber _bomber, Transform _target, ParticleSystem _explosionVFX)
     {
         this.bomber = _bomber;
         this.target = _target;
+        this.explosionVFX = _explosionVFX;
     }
 
     private void Update()
@@ -60,7 +63,13 @@ public class Bomb : MonoBehaviour
 
     private void DealDamageAndDestroy()
     {
+        if (isExplode) return;
+
+        isExplode = true;
+
         AudioManager.Instance.PlaySFX(explosionSFX, .5f);
+
+        Instantiate(explosionVFX, transform.position, Quaternion.identity);
 
         Collider[] colliders = Physics.OverlapSphere(transform.position, 2);
         foreach (Collider nearbyObject in colliders)

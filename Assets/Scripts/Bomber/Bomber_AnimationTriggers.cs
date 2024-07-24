@@ -9,6 +9,8 @@ public class Bomber_AnimationTriggers : MonoBehaviour
 
     [SerializeField] private GameObject bombPrefab;
     [SerializeField] private Transform bombSpawn;
+    [SerializeField] private ParticleSystem explosionVFX;
+
 
     private void AnimationTrigger()
     {
@@ -18,7 +20,7 @@ public class Bomber_AnimationTriggers : MonoBehaviour
     private void AttackTrigger()
     {
         GameObject bombObject = Instantiate(bombPrefab, bombSpawn.position, Quaternion.identity);
-        bombObject.GetComponent<Bomb>().SetupBomb(bomber, bomber.bombTarget);
+        bombObject.GetComponent<Bomb>().SetupBomb(bomber, bomber.bombTarget, explosionVFX);
     }
 
     private void PlayerBombThrowSound()

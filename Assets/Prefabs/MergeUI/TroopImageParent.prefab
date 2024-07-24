@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ec9d8e04ba8194284e5cc199200be2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mergeVFX: {fileID: 0}
 --- !u!1 &6386693068820040587
 GameObject:
   m_ObjectHideFlags: 0
