@@ -45,13 +45,13 @@ public class EnemySpawner : MonoBehaviour
             
             if(GameManager.Instance.currentState == GameModes.easy)
             {
-                npcStats.damage.SetValue(npcStats.damage.GetValue() * (0.8f));
-                npcStats.maxHealth.SetValue(npcStats.maxHealth.GetValue() * (0.8f));
+                npcStats.characterStatsSO.damage.SetValue(npcStats.characterStatsSO.damage.GetValue() * (0.8f));
+                npcStats.characterStatsSO.maxHealth.SetValue(npcStats.characterStatsSO.maxHealth.GetValue() * (0.8f));
             }
             else if (GameManager.Instance.currentState == GameModes.hard)
             {
-                npcStats.damage.SetValue(npcStats.damage.GetValue() * (1.5f));
-                npcStats.maxHealth.SetValue(npcStats.maxHealth.GetValue() * (1.5f));
+                npcStats.characterStatsSO.damage.SetValue(npcStats.characterStatsSO.damage.GetValue() * (1.5f));
+                npcStats.characterStatsSO.maxHealth.SetValue(npcStats.characterStatsSO.maxHealth.GetValue() * (1.5f));
             }
             SetLayerAllChildren(enemy.transform, "BlueTeam");
             enemyCounts[targetLane]++;
