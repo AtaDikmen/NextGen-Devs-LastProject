@@ -51,6 +51,8 @@ public class NPC : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         npcCollider = GetComponent<BoxCollider>();
         stats = GetComponent<NpcStats>();
+
+        SetTargetAndAlly();
     }
     
     protected virtual void Update()
@@ -100,6 +102,15 @@ public class NPC : MonoBehaviour
     }
 
     #endregion
+    private void SetTargetAndAlly()
+    {
+        if (gameObject.layer == LayerMask.NameToLayer("BlueTeam"))
+        {
+            whoIsAlly = 1 << LayerMask.NameToLayer("BlueTeam");
+            whoIsTarget = 1 << LayerMask.NameToLayer("RedTeam");
+        }
+    }
+
     public virtual void AnimationFinishTrigger() => stateMachine.currentState.AnimationFinishTrigger();
 
     public virtual void Die()

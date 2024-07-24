@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour
         {
             Instantiate(troopPrefab, spawnPositions[index].position, Quaternion.Euler(0, 90, 0));
             troopPrefab.GetComponent<NpcStats>().laneIndex = index;
-            //laneManager.AddTroop(troopPrefab.transform, index);
+            laneManager.AddTroop(troopPrefab.transform, index);
         }
     }
 }

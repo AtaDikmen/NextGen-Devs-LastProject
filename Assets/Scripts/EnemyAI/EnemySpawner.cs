@@ -32,7 +32,7 @@ public class EnemySpawner : MonoBehaviour
             spawnRate = 1.0f;
         }
 
-        InvokeRepeating("SpawnEnemy", 20.0f, spawnRate);
+        InvokeRepeating("SpawnEnemy", 5f, spawnRate);
     }
 
     public void SpawnEnemy()
@@ -41,18 +41,20 @@ public class EnemySpawner : MonoBehaviour
         if (targetLane != null)
         {
             enemy = Instantiate(enemyPrefabs[Random.Range(0,enemyPrefabs.Count)], spawnPositions[laneControllers.IndexOf(targetLane)].position, Quaternion.Euler(0, -90, 0));
+
             NpcStats npcStats = enemy.GetComponent<NpcStats>();
-            
-            if(GameManager.Instance.currentState == GameModes.easy)
-            {
-                npcStats.characterStatsSO.damage.SetValue(npcStats.characterStatsSO.damage.GetValue() * (0.8f));
-                npcStats.characterStatsSO.maxHealth.SetValue(npcStats.characterStatsSO.maxHealth.GetValue() * (0.8f));
-            }
+            CharacterStatsSO characterStats = npcStats.characterStatsSO;
+
+            float difficultyMultiplier = 1f;
+
+            if (GameManager.Instance.currentState == GameModes.easy)
+                difficultyMultiplier = 0.8f;
             else if (GameManager.Instance.currentState == GameModes.hard)
-            {
-                npcStats.characterStatsSO.damage.SetValue(npcStats.characterStatsSO.damage.GetValue() * (1.5f));
-                npcStats.characterStatsSO.maxHealth.SetValue(npcStats.characterStatsSO.maxHealth.GetValue() * (1.5f));
-            }
+                difficultyMultiplier = 1.5f;
+
+            characterStats.damage.SetValue(characterStats.damage.GetValue() * difficultyMultiplier);
+            characterStats.maxHealth.SetValue(characterStats.maxHealth.GetValue() * difficultyMultiplier);
+
             SetLayerAllChildren(enemy.transform, "BlueTeam");
             enemyCounts[targetLane]++;
             enemyPowers[targetLane] += enemy.GetComponent<NpcStats>().power;

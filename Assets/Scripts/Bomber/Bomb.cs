@@ -68,7 +68,9 @@ public class Bomb : MonoBehaviour
             if (bomber.whoIsTarget == (bomber.whoIsTarget | (1 << nearbyObject.gameObject.layer)))
             {
                 NpcStats _target = nearbyObject.transform.GetComponent<NpcStats>();
-                bomber.stats.DoDamage(_target);
+
+                if(bomber != null)
+                    bomber.stats.DoDamage(_target);
             }
         }
 
