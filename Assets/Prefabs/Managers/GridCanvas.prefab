@@ -223,6 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e0b10e27cc02514fb77c4623a6165c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bombAbility: {fileID: 0}
   abilityType: 0
 --- !u!1 &1328563061526981082
 GameObject:
@@ -388,6 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e0b10e27cc02514fb77c4623a6165c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bombAbility: {fileID: 0}
   abilityType: 1
 --- !u!1 &1537374319258619634
 GameObject:
@@ -402,7 +404,7 @@ GameObject:
   - component: {fileID: 556738452033649275}
   - component: {fileID: 7393111227519917460}
   m_Layer: 5
-  m_Name: Lane 2
+  m_Name: 2
   m_TagString: Lane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -579,7 +581,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1720648689681008179}
   m_LocalRotation: {x: 0.026231527, y: -0, z: -0, w: 0.99965596}
-  m_LocalPosition: {x: 0, y: 0, z: 9472}
+  m_LocalPosition: {x: 0, y: 0, z: 9637}
   m_LocalScale: {x: 8.059708, y: 8.059708, z: 8.059708}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -592,7 +594,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 3.006, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2403, y: 14984}
+  m_AnchoredPosition: {x: -4161, y: 18120}
   m_SizeDelta: {x: 250.00003, y: 1350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1733818089624675575
@@ -935,6 +937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e0b10e27cc02514fb77c4623a6165c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bombAbility: {fileID: 0}
   abilityType: 2
 --- !u!1 &3505484893194070549
 GameObject:
@@ -1100,7 +1103,7 @@ GameObject:
   - component: {fileID: 5273469882920514204}
   - component: {fileID: 8797512306839713378}
   m_Layer: 5
-  m_Name: Lane 3
+  m_Name: 3
   m_TagString: Lane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1190,7 +1193,7 @@ GameObject:
   - component: {fileID: 6530212979600218846}
   - component: {fileID: 3996019020325959404}
   m_Layer: 5
-  m_Name: Lane 4
+  m_Name: 4
   m_TagString: Lane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1280,7 +1283,7 @@ GameObject:
   - component: {fileID: 2265081506128600407}
   - component: {fileID: 8630339732871263550}
   m_Layer: 5
-  m_Name: Lane 1
+  m_Name: 1
   m_TagString: Lane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1814,7 +1817,7 @@ GameObject:
   - component: {fileID: 2559533639031227038}
   - component: {fileID: 6193616662243157200}
   m_Layer: 5
-  m_Name: Lane 5
+  m_Name: 5
   m_TagString: Lane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2125,7 +2128,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7929755717237410147}
   m_LocalRotation: {x: -0.000000029123239, y: 0.026231792, z: -0.99965596, w: 0.00000023966123}
-  m_LocalPosition: {x: 0, y: 0, z: 9627}
+  m_LocalPosition: {x: 0, y: 0, z: 9632}
   m_LocalScale: {x: 8.059708, y: 8.059708, z: 8.059708}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2138,6 +2141,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 3.006, y: 0, z: -180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4692, y: 17937}
+  m_AnchoredPosition: {x: 4692, y: 18016}
   m_SizeDelta: {x: 250.00003, y: 1350}
   m_Pivot: {x: 0.5, y: 0.5}

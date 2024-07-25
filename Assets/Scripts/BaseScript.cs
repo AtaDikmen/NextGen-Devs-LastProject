@@ -8,13 +8,13 @@ public class BaseScript : MonoBehaviour
     {
         if (gameObject.CompareTag("PlayerBase") && other.gameObject.layer == LayerMask.NameToLayer("BlueTeam"))
         {
-            GameManager.Instance.PlayerHealth -= 10; //Arbitrary value
+            GameManager.Instance.PlayerHealth -= other.gameObject.GetComponent<NpcStats>().power; ; //Arbitrary value
             Debug.Log("Player base damaged!");
 
         }
         else if (gameObject.CompareTag("EnemyBase") && other.gameObject.layer == LayerMask.NameToLayer("RedTeam"))
         {
-            GameManager.Instance.EnemyHealth -= 10; //Arbitrary value
+            GameManager.Instance.EnemyHealth -= other.gameObject.GetComponent<NpcStats>().power; //Arbitrary value
             Debug.Log("Enemy base damaged!");
         }
         Destroy(other.gameObject);
