@@ -7,6 +7,8 @@ TagManager:
   - TroopImage
   - Lane
   - Bomb
+  - FxTemporaire
+  - NPC
   layers:
   - Default
   - TransparentFX

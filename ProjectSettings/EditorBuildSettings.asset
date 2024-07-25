@@ -11,4 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EnemyAIScene.unity
     guid: c93de87a0cc37774f84e00dc220ec27a
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
+      guid: 14f25cc36176adc46951ca8d1ca574da, type: 2}

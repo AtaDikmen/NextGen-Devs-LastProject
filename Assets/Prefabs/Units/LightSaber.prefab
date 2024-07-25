@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 2130034994724209925}
   m_Layer: 6
   m_Name: LightSaber
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -236,7 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterStatsSO: {fileID: 11400000, guid: bbb7268fdb515414d827528545ef4a87, type: 2}
   power: 10
-  laneIndex: 0
+  laneIndex: 4
   currentHealth: 0
   laneManager: {fileID: 0}
 --- !u!54 &5691857144814913239

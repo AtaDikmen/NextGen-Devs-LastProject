@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8304834938929168576}
   m_Layer: 6
   m_Name: Tank
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterStatsSO: {fileID: 11400000, guid: fd44947b15c6c8549906b68a227cc7ed, type: 2}
   power: 0
-  laneIndex: 0
+  laneIndex: 2
   currentHealth: 0
   laneManager: {fileID: 0}
 --- !u!114 &8304834938929168576

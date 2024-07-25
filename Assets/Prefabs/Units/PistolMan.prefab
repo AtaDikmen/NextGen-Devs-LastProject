@@ -2891,7 +2891,7 @@ GameObject:
   - component: {fileID: 3159688795640080502}
   m_Layer: 6
   m_Name: PistolMan
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2961,7 +2961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterStatsSO: {fileID: 11400000, guid: 19091035e667ef741aa297956768413d, type: 2}
   power: 25
-  laneIndex: 0
+  laneIndex: 2
   currentHealth: 0
   laneManager: {fileID: 0}
 --- !u!54 &1646338626761973865

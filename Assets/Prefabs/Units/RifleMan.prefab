@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 7936940494525162670}
   m_Layer: 6
   m_Name: RifleMan
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterStatsSO: {fileID: 11400000, guid: 55a4d36ddd0c12847b577ec1babd9777, type: 2}
   power: 55
-  laneIndex: 0
+  laneIndex: 4
   currentHealth: 0
   laneManager: {fileID: 0}
 --- !u!54 &4577657254627387371
