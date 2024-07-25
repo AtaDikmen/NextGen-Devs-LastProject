@@ -5235,10 +5235,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 6715594606427219937, guid: 0b24d11b7a5684b41978c61c4495b29d, type: 3}
   - {fileID: 2652287216522705083, guid: d5df3650fbe20ae479936cb32595ca3a, type: 3}
   - {fileID: 3438472181584073056, guid: 00e1c062eff0f85458a2236d5a5415af, type: 3}
   - {fileID: 7908915051614006644, guid: 24e88f4a5099a1f4c9e8a93b6a86ee33, type: 3}
+  - {fileID: 6715594606427219937, guid: 0b24d11b7a5684b41978c61c4495b29d, type: 3}
   - {fileID: 4592870715156698518, guid: ee0ac970cb61206488dfc0111b97cefa, type: 3}
   laneManager: {fileID: 666589222}
   spawnPositions:
