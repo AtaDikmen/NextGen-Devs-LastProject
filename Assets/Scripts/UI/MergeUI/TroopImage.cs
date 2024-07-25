@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    [SerializeField] private ParticleSystem mergeVFX;
-
     private Spawner spawner;
 
     private TroopType type;
@@ -98,6 +96,10 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     }
     private void DeployTroopOnLane(RaycastResult result)
     {
+        AudioClip deploySFX = Resources.Load<AudioClip>("Metallic2");
+
+        AudioManager.Instance.PlaySFX(deploySFX, transform);
+
         spawner.SpawnTroop(type, Int32.Parse(result.gameObject.name) - 1);
         
         DeactivateTroopImage();

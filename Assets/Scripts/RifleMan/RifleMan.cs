@@ -4,6 +4,7 @@ using UnityEngine;
 public class RifleMan : NPC
 {
     public float fireDuration;
+    public AudioSource fireAS => GetComponent<AudioSource>();
 
     #region States
     public RifleMan_IdleState idleState { get; private set; }

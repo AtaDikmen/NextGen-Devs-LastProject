@@ -16,6 +16,8 @@ public class RifleMan_AttackState : NpcState
         base.Enter();
 
         stateTimer = npc.fireDuration;
+
+        npc.fireAS.Play();
     }
 
     public override void Exit()
@@ -23,6 +25,7 @@ public class RifleMan_AttackState : NpcState
         base.Exit();
 
         npc.lastTimeAttacked = Time.time;
+        npc.fireAS.Stop();
     }
 
     public override void Update()
