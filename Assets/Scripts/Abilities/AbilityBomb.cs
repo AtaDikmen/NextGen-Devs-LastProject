@@ -1,4 +1,4 @@
-using Unity.VisualScripting;
+using System.Collections;
 using UnityEngine;
 
 public class AbilityBomb : MonoBehaviour
@@ -7,15 +7,17 @@ public class AbilityBomb : MonoBehaviour
     public LayerMask whoIsTarget;
     public bool isSmartBomb;
 
+    private Transform defaultPosition;
     [SerializeField] private ParticleSystem explosionVFX;
     [SerializeField] private AudioClip explosionSFX;
     private bool isExplode;
 
     private void Start()
     {
+        defaultPosition = transform;
         explosionSFX = Resources.Load<AudioClip>("BombExplode");
 
-        Invoke("SetDisableAfterTime", 3f);
+        StartCoroutine(SetDisableAfterTime());
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,10 +25,15 @@ public class AbilityBomb : MonoBehaviour
         Explosion();
     }
 
-    private void SetDisableAfterTime()
+    private IEnumerator SetDisableAfterTime()
     {
-        if(gameObject.transform.parent.gameObject.activeSelf)
-            gameObject.transform.parent.gameObject.SetActive(false);
+        yield return new WaitForSeconds(3);
+
+        transform.position = defaultPosition.position;
+
+        yield return new WaitForSeconds(3);
+
+        gameObject.transform.parent.gameObject.SetActive(false);
     }
 
     private void Explosion()
@@ -35,9 +42,7 @@ public class AbilityBomb : MonoBehaviour
 
         AudioManager.Instance.PlaySFX(explosionSFX, transform);
 
-        //Instantiate(explosionVFX, new Vector3(transform.position.x, transform.position.y + 4, transform.position.z)  , Quaternion.identity);
-
-        Debug.LogWarning("EXPLODE");
+        Instantiate(explosionVFX, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z)  , Quaternion.identity);
 
         isExplode = true;
 
