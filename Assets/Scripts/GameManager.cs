@@ -47,7 +47,10 @@ public class GameManager : MonoBehaviour
     }
     public void UpdatePlayerHealth()
     {
-        float healthNormalized = playerHealth / (enemyHealth + playerHealth);
-        playerHealthSlider.value = healthNormalized;
+        if (playerHealthSlider != null)
+        {
+            float healthNormalized = playerHealth / (enemyHealth + playerHealth);
+            playerHealthSlider.value = healthNormalized;
+        }
     }
 }
