@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class UI_EndGame : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField] private TextMeshProUGUI endGameHeader;
     [SerializeField] private TextMeshProUGUI winText;
     [SerializeField] private TextMeshProUGUI loseText;

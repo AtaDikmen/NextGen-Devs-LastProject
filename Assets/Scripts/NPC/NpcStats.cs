@@ -11,7 +11,7 @@ public class NpcStats : MonoBehaviour
     public int power;
     public int laneIndex;
 
-    [SerializeField] private float currentHealth;
+    public float currentHealth;
     [SerializeField] private LaneManager laneManager;
     private HealthBar healthBar;
 

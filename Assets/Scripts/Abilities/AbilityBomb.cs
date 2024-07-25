@@ -3,37 +3,39 @@ using UnityEngine;
 
 public class AbilityBomb : MonoBehaviour
 {
+    private Rigidbody rb;
+
     //SmartBomb
     public LayerMask whoIsTarget;
     public bool isSmartBomb;
 
-    private Transform defaultPosition;
+    private Vector3 defaultPosition;
     [SerializeField] private ParticleSystem explosionVFX;
     [SerializeField] private AudioClip explosionSFX;
     private bool isExplode;
 
     private void Start()
     {
-        defaultPosition = transform;
+        rb = GetComponent<Rigidbody>();
+        defaultPosition = transform.position;
         explosionSFX = Resources.Load<AudioClip>("BombExplode");
-
-        StartCoroutine(SetDisableAfterTime());
     }
+    
 
     private void OnTriggerEnter(Collider other)
     {
-        Explosion();
+        if (!isExplode)
+        {
+            Explosion();
+        }
     }
 
-    private IEnumerator SetDisableAfterTime()
+    private void SetDefaultPosition()
     {
-        yield return new WaitForSeconds(3);
-
-        transform.position = defaultPosition.position;
-
-        yield return new WaitForSeconds(3);
-
-        gameObject.transform.parent.gameObject.SetActive(false);
+        rb.useGravity = false;
+        rb.isKinematic = true;
+        transform.position = defaultPosition;
+        isExplode = false;
     }
 
     private void Explosion()
@@ -58,6 +60,13 @@ public class AbilityBomb : MonoBehaviour
                 Destroy(nearbyObject.gameObject);
             }
         }
+
+        StartCoroutine(ResetPositionAfterDelay(2f));
     }
 
+    private IEnumerator ResetPositionAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SetDefaultPosition();
+    }
 }

@@ -6020,32 +6020,59 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Merge Mechanic:
+  m_text: 'Objective:
 
-    Do bla bla bla bla bla
-
-
-    Win Conditions:
-
-    Do
-    bla bla bla bla
+    The main goal is to send as many units as possible to
+    the enemy''s base. The more units you send, the closer you are to victory.
 
 
-    UNITS
+    Unit
+    Types:
 
-    Lasersaber:
+    LaserSword: Close-range, high damage
 
-    Laser Gunner:
+    LaserGunner: Single shot,
+    medium range
 
-    Laser Rifle:
+    LaserRifle: Rapid fire, long range
 
-    Bomber
-    Robot:
+    Bomber: Area damage,
+    medium range
 
-    Hulk Buster:
+    HulkBuster:Heavy melee and highest health and attack power
 
 
-    Abilities:'
+    Winning
+    Condition:
+
+    Send more units to the enemy base than your opponent sends to
+    yours.
+
+    Losing Condition:
+
+    Your opponent sends more units to your base
+    than you send to theirs.
+
+
+    Merge Mechanic:
+
+    The core mechanic of the
+    game is merging units on the Merge Table. Place two units of the same type on
+    top of each other to upgrade to a higher-level unit.
+
+
+    Spawning Units:
+
+    Spawning
+    units on the table costs coins. Manage your resources carefully to maintain a
+    steady flow of units.
+
+
+    Special Abilities:
+
+    There are three different
+    special abilities you can use to gain an advantage. Each ability costs coins
+    to use.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0f2f1742ae4af0945943d7d65faea078, type: 2}
   m_sharedMaterial: {fileID: 1094405863860042493, guid: 0f2f1742ae4af0945943d7d65faea078,
@@ -6073,7 +6100,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 32.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7773,7 +7800,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 457fc6f522a6b7c4abe35ce20d212fb5, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0

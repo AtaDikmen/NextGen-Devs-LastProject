@@ -1,16 +1,19 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 public enum AbilityType { SmartBomb, Bomb, Heal }
 public class AbilityImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    [SerializeField] private AbilityBomb_Controller bombAbility;
+    [SerializeField] private AbilityController abilityController;
 
     private Transform originalParent;
     private Vector3 originalPosition;
     [SerializeField] private AbilityType abilityType;
+
+    private int bombAbilityPrice = 10;
+    private int smartBombAbilityPrice = 20;
+    private int healAbilityPrice = 15;
     void Start()
     {
         originalParent = transform.parent;
@@ -49,11 +52,41 @@ public class AbilityImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     private void DeployAbilityOnLane(RaycastResult result)
     {
+        if(abilityType == AbilityType.SmartBomb || abilityType == AbilityType.Bomb)
+            CheckForBombAbility(result);
+
+        if (abilityType == AbilityType.Heal)
+        {
+            if (PlayerManager.Instance.CurrentPlayerGold < healAbilityPrice)
+                return;
+            abilityController.UseHealAbilityOnLane(Int32.Parse(result.gameObject.name) - 1);
+        }
+
+    }
+
+    private void CheckForBombAbility(RaycastResult result)
+    {
         bool isSmart = false;
 
         if (abilityType == AbilityType.SmartBomb)
             isSmart = true;
 
-        bombAbility.UseAbilityOnLane(Int32.Parse(result.gameObject.name) - 1, isSmart);
+        if (isSmart)
+        {
+            if (PlayerManager.Instance.CurrentPlayerGold < smartBombAbilityPrice)
+                return;
+
+            PlayerManager.Instance.CurrentPlayerGold -= smartBombAbilityPrice;
+        }
+        else
+        {
+            if (PlayerManager.Instance.CurrentPlayerGold < bombAbilityPrice)
+                return;
+
+            PlayerManager.Instance.CurrentPlayerGold -= bombAbilityPrice;
+        }
+
+        abilityController.UseBombAbilityOnLane(Int32.Parse(result.gameObject.name) - 1, isSmart);
+        return;
     }
 }

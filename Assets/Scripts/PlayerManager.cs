@@ -46,7 +46,7 @@ public class PlayerManager : MonoBehaviour
     {
         playerHealth = 200;
         enemyHealth = 200;
-        CurrentPlayerGold = 0;
+        CurrentPlayerGold = 30;
         UpdatePlayerHealth();
         StartCoroutine(GainGoldOverTime(1));
 
