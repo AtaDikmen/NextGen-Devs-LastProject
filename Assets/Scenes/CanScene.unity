@@ -632,21 +632,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1387942764361284453, guid: b46e0f457f19a49438804c2a9da1af69,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9632
-      objectReference: {fileID: 0}
-    - target: {fileID: 1387942764361284453, guid: b46e0f457f19a49438804c2a9da1af69,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 18016
-      objectReference: {fileID: 0}
-    - target: {fileID: 1537374319258619634, guid: b46e0f457f19a49438804c2a9da1af69,
-        type: 3}
-      propertyPath: m_Name
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2119636599468001278, guid: b46e0f457f19a49438804c2a9da1af69,
         type: 3}
       propertyPath: m_Pivot.x
@@ -757,51 +742,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 230578294}
-    - target: {fileID: 3875436880900766924, guid: b46e0f457f19a49438804c2a9da1af69,
-        type: 3}
-      propertyPath: m_Name
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4250921155220785526, guid: b46e0f457f19a49438804c2a9da1af69,
-        type: 3}
-      propertyPath: m_Name
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4431186386261144955, guid: b46e0f457f19a49438804c2a9da1af69,
-        type: 3}
-      propertyPath: m_Name
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4995391149665548941, guid: b46e0f457f19a49438804c2a9da1af69,
         type: 3}
       propertyPath: m_Name
       value: GridCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 6587480961660810824, guid: b46e0f457f19a49438804c2a9da1af69,
-        type: 3}
-      propertyPath: m_Name
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6817362416151187345, guid: b46e0f457f19a49438804c2a9da1af69,
         type: 3}
       propertyPath: bombAbility
       value: 
       objectReference: {fileID: 1162603542}
-    - target: {fileID: 7768947688361246894, guid: b46e0f457f19a49438804c2a9da1af69,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9637
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768947688361246894, guid: b46e0f457f19a49438804c2a9da1af69,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -4161
-      objectReference: {fileID: 0}
-    - target: {fileID: 7768947688361246894, guid: b46e0f457f19a49438804c2a9da1af69,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 18120
-      objectReference: {fileID: 0}
     - target: {fileID: 9042749874743737951, guid: b46e0f457f19a49438804c2a9da1af69,
         type: 3}
       propertyPath: bombAbility

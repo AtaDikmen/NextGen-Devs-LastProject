@@ -41,8 +41,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        PlayerHealth = 100;
-        EnemyHealth = 100;
+        PlayerHealth = 200;
+        EnemyHealth = 200;
         UpdatePlayerHealth();
     }
     public void UpdatePlayerHealth()

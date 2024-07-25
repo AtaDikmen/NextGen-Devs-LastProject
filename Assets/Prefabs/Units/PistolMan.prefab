@@ -2960,8 +2960,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterStatsSO: {fileID: 11400000, guid: 19091035e667ef741aa297956768413d, type: 2}
-  power: 25
-  laneIndex: 2
+  power: 20
+  laneIndex: 4
   currentHealth: 0
   laneManager: {fileID: 0}
 --- !u!54 &1646338626761973865

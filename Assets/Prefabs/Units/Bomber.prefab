@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterStatsSO: {fileID: 11400000, guid: b6add6157e2441946baa8789cf1b1bd1, type: 2}
-  power: 75
+  power: 45
   laneIndex: 0
   currentHealth: 0
   laneManager: {fileID: 0}
