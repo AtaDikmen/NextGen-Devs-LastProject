@@ -9,6 +9,8 @@ TagManager:
   - Bomb
   - FxTemporaire
   - NPC
+  - PlayerBase
+  - EnemyBase
   layers:
   - Default
   - TransparentFX
