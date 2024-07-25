@@ -324,7 +324,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isSmartBomb: 0
-  defaultPosition: {fileID: 118165392}
   explosionVFX: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionSFX: {fileID: 8300000, guid: c3d50f37f9aab7543a6e24a5765ffda9, type: 3}
@@ -833,7 +832,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isSmartBomb: 0
-  defaultPosition: {fileID: 288624128}
   explosionVFX: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionSFX: {fileID: 8300000, guid: c3d50f37f9aab7543a6e24a5765ffda9, type: 3}
@@ -1057,7 +1055,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isSmartBomb: 0
-  defaultPosition: {fileID: 361383828}
   explosionVFX: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionSFX: {fileID: 8300000, guid: c3d50f37f9aab7543a6e24a5765ffda9, type: 3}
@@ -1599,7 +1596,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isSmartBomb: 0
-  defaultPosition: {fileID: 511627655}
   explosionVFX: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionSFX: {fileID: 8300000, guid: c3d50f37f9aab7543a6e24a5765ffda9, type: 3}
@@ -2241,7 +2237,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isSmartBomb: 0
-  defaultPosition: {fileID: 692578117}
   explosionVFX: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionSFX: {fileID: 8300000, guid: c3d50f37f9aab7543a6e24a5765ffda9, type: 3}
@@ -2762,7 +2757,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isSmartBomb: 0
-  defaultPosition: {fileID: 822774018}
   explosionVFX: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionSFX: {fileID: 8300000, guid: c3d50f37f9aab7543a6e24a5765ffda9, type: 3}
@@ -3043,7 +3037,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isSmartBomb: 0
-  defaultPosition: {fileID: 869455632}
   explosionVFX: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionSFX: {fileID: 8300000, guid: c3d50f37f9aab7543a6e24a5765ffda9, type: 3}
@@ -3559,7 +3552,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isSmartBomb: 0
-  defaultPosition: {fileID: 961050761}
   explosionVFX: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionSFX: {fileID: 8300000, guid: c3d50f37f9aab7543a6e24a5765ffda9, type: 3}
@@ -4622,7 +4614,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isSmartBomb: 0
-  defaultPosition: {fileID: 1243764187}
   explosionVFX: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionSFX: {fileID: 8300000, guid: c3d50f37f9aab7543a6e24a5765ffda9, type: 3}
@@ -4725,7 +4716,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isSmartBomb: 0
-  defaultPosition: {fileID: 1289764185}
   explosionVFX: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionSFX: {fileID: 8300000, guid: c3d50f37f9aab7543a6e24a5765ffda9, type: 3}
@@ -4949,7 +4939,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isSmartBomb: 0
-  defaultPosition: {fileID: 1339271668}
   explosionVFX: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionSFX: {fileID: 8300000, guid: c3d50f37f9aab7543a6e24a5765ffda9, type: 3}
@@ -5252,13 +5241,13 @@ MonoBehaviour:
   - {fileID: 7908915051614006644, guid: 24e88f4a5099a1f4c9e8a93b6a86ee33, type: 3}
   - {fileID: 4592870715156698518, guid: ee0ac970cb61206488dfc0111b97cefa, type: 3}
   laneManager: {fileID: 666589222}
-  laneControllers: []
   spawnPositions:
   - {fileID: 273098628}
   - {fileID: 1017672520}
   - {fileID: 1367424081}
   - {fileID: 346249147}
   - {fileID: 1360398290}
+  enabledPrefabs: []
 --- !u!4 &1477247190
 Transform:
   m_ObjectHideFlags: 0
@@ -5401,7 +5390,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isSmartBomb: 0
-  defaultPosition: {fileID: 1488798441}
   explosionVFX: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionSFX: {fileID: 8300000, guid: c3d50f37f9aab7543a6e24a5765ffda9, type: 3}
@@ -5504,7 +5492,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isSmartBomb: 0
-  defaultPosition: {fileID: 1504424505}
   explosionVFX: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionSFX: {fileID: 8300000, guid: c3d50f37f9aab7543a6e24a5765ffda9, type: 3}
@@ -5871,7 +5858,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isSmartBomb: 0
-  defaultPosition: {fileID: 1637644031}
   explosionVFX: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionSFX: {fileID: 8300000, guid: c3d50f37f9aab7543a6e24a5765ffda9, type: 3}
@@ -6348,7 +6334,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isSmartBomb: 0
-  defaultPosition: {fileID: 1832427524}
   explosionVFX: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionSFX: {fileID: 8300000, guid: c3d50f37f9aab7543a6e24a5765ffda9, type: 3}
@@ -6783,7 +6768,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isSmartBomb: 0
-  defaultPosition: {fileID: 2113046775}
   explosionVFX: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionSFX: {fileID: 8300000, guid: c3d50f37f9aab7543a6e24a5765ffda9, type: 3}
@@ -6886,7 +6870,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isSmartBomb: 0
-  defaultPosition: {fileID: 2117668356}
   explosionVFX: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionSFX: {fileID: 8300000, guid: c3d50f37f9aab7543a6e24a5765ffda9, type: 3}
@@ -6989,7 +6972,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isSmartBomb: 0
-  defaultPosition: {fileID: 2130221678}
   explosionVFX: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionSFX: {fileID: 8300000, guid: c3d50f37f9aab7543a6e24a5765ffda9, type: 3}
@@ -7092,7 +7074,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isSmartBomb: 0
-  defaultPosition: {fileID: 2130665837}
   explosionVFX: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionSFX: {fileID: 8300000, guid: c3d50f37f9aab7543a6e24a5765ffda9, type: 3}
@@ -7195,7 +7176,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isSmartBomb: 0
-  defaultPosition: {fileID: 2136685158}
   explosionVFX: {fileID: 2433282508523890284, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312,
     type: 3}
   explosionSFX: {fileID: 8300000, guid: c3d50f37f9aab7543a6e24a5765ffda9, type: 3}
