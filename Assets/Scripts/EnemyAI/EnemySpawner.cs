@@ -6,14 +6,14 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private List<GameObject> enemyPrefabs;
     [SerializeField] private LaneManager laneManager;
-    [SerializeField] private List<LaneController> laneControllers;
+    private List<LaneController> laneControllers;
     [SerializeField] private Transform[] spawnPositions;
     private float spawnRate;
+    private float tankSpawnRate;
     private Dictionary<LaneController, int> enemyCounts = new Dictionary<LaneController, int>(); // To keep track of how many enemies are in each lane
     private Dictionary<LaneController, int> enemyPowers = new Dictionary<LaneController, int>(); // To keep track of total enemy power in each lane
-    private GameObject enemy;
+    [SerializeField] private List<GameObject> enabledPrefabs = new List<GameObject>();
 
-    // Start is called before the first frame update
     void Start()
     {
         laneControllers = laneManager.GetLanes();
@@ -23,46 +23,75 @@ public class EnemySpawner : MonoBehaviour
             enemyPowers[lane] = 0;
         }
 
-        if (GameManager.Instance.currentMode == GameModes.Normal)
+        enabledPrefabs.Add(enemyPrefabs[0]);
+        StartCoroutine(EnablePrefabsOverTime());
+
+        if (GameManager.Instance.currentMode == GameModes.Normal || GameManager.Instance.currentMode == GameModes.Easy)
         {
-            spawnRate = 3.0f;
+            spawnRate = 5.0f;
+            tankSpawnRate = 45.0f;
         }
         else if (GameManager.Instance.currentMode == GameModes.Hardcore)
         {
-            spawnRate = 1.0f;
+            spawnRate = 3.0f;
+            tankSpawnRate = 30.0f;
         }
 
-        InvokeRepeating("SpawnEnemy", 5f, spawnRate);
+        InvokeRepeating("SpawnRandomEnemy", 5f, spawnRate);
+        InvokeRepeating("SpawnTank", 32f, tankSpawnRate);
     }
 
-    public void SpawnEnemy()
+    private IEnumerator EnablePrefabsOverTime()
+    {
+        for (int i = 1; i < enemyPrefabs.Count-1; i++)
+        {
+            yield return new WaitForSeconds(10f); //enemies are enabled at 10 second intervals
+            enabledPrefabs.Add(enemyPrefabs[i]);
+        }
+    }
+
+    public void SpawnRandomEnemy()
     {
         LaneController targetLane = GetTargetLane();
         if (targetLane != null)
         {
-            enemy = Instantiate(enemyPrefabs[Random.Range(0,enemyPrefabs.Count)], spawnPositions[laneControllers.IndexOf(targetLane)].position, Quaternion.Euler(0, -90, 0));
-
-            NpcStats npcStats = enemy.GetComponent<NpcStats>();
-
-            //Clone ScriptableObject to change stats only in enemy
-            CharacterStatsSO originalStats = npcStats.characterStatsSO;
-            CharacterStatsSO clonedStats = ScriptableObjectUtility.Clone(originalStats);
-            npcStats.characterStatsSO = clonedStats;
-
-            float difficultyMultiplier = 1f;
-
-            if (GameManager.Instance.currentMode == GameModes.Easy)
-                difficultyMultiplier = 0.8f;
-            else if (GameManager.Instance.currentMode == GameModes.Hardcore)
-                difficultyMultiplier = 1.5f;
-
-            clonedStats.damage.SetValue(clonedStats.damage.GetValue() * difficultyMultiplier);
-            clonedStats.maxHealth.SetValue(clonedStats.maxHealth.GetValue() * difficultyMultiplier);
-
-            SetLayerAllChildren(enemy.transform, "BlueTeam");
-            enemyCounts[targetLane]++;
-            enemyPowers[targetLane] += enemy.GetComponent<NpcStats>().power;
+            GameObject enemy = Instantiate(enabledPrefabs[Random.Range(0, enabledPrefabs.Count)], spawnPositions[laneControllers.IndexOf(targetLane)].position, Quaternion.Euler(0, -90, 0));
+            SetEnemyProperties(enemy, targetLane);
         }
+    }
+
+    public void SpawnTank()
+    {
+        LaneController targetLane = GetTargetLane();
+        if (targetLane != null)
+        {
+            GameObject enemy = Instantiate(enemyPrefabs[enemyPrefabs.Count-1], spawnPositions[laneControllers.IndexOf(targetLane)].position, Quaternion.Euler(0, -90, 0));
+            SetEnemyProperties(enemy, targetLane);
+        }
+    }
+
+    private void SetEnemyProperties(GameObject _enemy, LaneController _targetLane)
+    {
+        NpcStats npcStats = _enemy.GetComponent<NpcStats>();
+
+        //Clone ScriptableObject to change stats only in enemy
+        CharacterStatsSO originalStats = npcStats.characterStatsSO;
+        CharacterStatsSO clonedStats = ScriptableObjectUtility.Clone(originalStats);
+        npcStats.characterStatsSO = clonedStats;
+
+        float difficultyMultiplier = 1f;
+
+        if (GameManager.Instance.currentMode == GameModes.Easy)
+            difficultyMultiplier = 0.8f;
+        else if (GameManager.Instance.currentMode == GameModes.Hardcore)
+            difficultyMultiplier = 1.5f;
+
+        clonedStats.damage.SetValue(clonedStats.damage.GetValue() * difficultyMultiplier);
+        clonedStats.maxHealth.SetValue(clonedStats.maxHealth.GetValue() * difficultyMultiplier);
+
+        SetLayerAllChildren(_enemy.transform, "BlueTeam");
+        enemyCounts[_targetLane]++;
+        enemyPowers[_targetLane] += _enemy.GetComponent<NpcStats>().power;
     }
 
     private LaneController GetTargetLane()
@@ -73,7 +102,7 @@ public class EnemySpawner : MonoBehaviour
         float randomRate = Random.Range(0.0f, 1.0f);
         Debug.Log("random rate: " + randomRate);
 
-        // 25% chance to spawn in an empty lane
+        // 25% chance to spawn to lane without player character
         if (randomRate < 0.25f)
         {
             foreach (LaneController lane in laneControllers)
@@ -135,13 +164,13 @@ public class EnemySpawner : MonoBehaviour
     }
 
     // Called when an enemy dies
-    public void RemoveEnemy(int laneIndex)
+    public void RemoveEnemy(GameObject _enemy, int laneIndex)
     {
         LaneController lane = laneControllers[laneIndex];
         if (enemyCounts.ContainsKey(lane) && enemyCounts[lane] > 0)
         {
             enemyCounts[lane]--;
-            enemyPowers[lane] -= enemy.GetComponent<NpcStats>().power;
+            enemyPowers[lane] -= _enemy.GetComponent<NpcStats>().power;
         }
     }
 
