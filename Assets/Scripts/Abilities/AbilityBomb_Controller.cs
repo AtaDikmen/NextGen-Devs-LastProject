@@ -4,15 +4,6 @@ public class AbilityBomb_Controller : MonoBehaviour
 {
     [SerializeField] private GameObject[] bombAbilityGroups;
 
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
 
     public void UseAbilityOnLane(int _laneIndex, bool _isSmart)
     {

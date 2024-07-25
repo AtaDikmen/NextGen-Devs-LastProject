@@ -226,7 +226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &95264353
 Transform:
   m_ObjectHideFlags: 0
@@ -326,6 +326,7 @@ MonoBehaviour:
   isSmartBomb: 0
   explosionVFX: {fileID: 725748389856807712, guid: 4bda94453d2ca7444a0fff05b2d425f5,
     type: 3}
+  explosionSFX: {fileID: 0}
 --- !u!135 &118165395
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -833,6 +834,7 @@ MonoBehaviour:
   isSmartBomb: 0
   explosionVFX: {fileID: 725748389856807712, guid: 4bda94453d2ca7444a0fff05b2d425f5,
     type: 3}
+  explosionSFX: {fileID: 0}
 --- !u!135 &288624131
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1055,6 +1057,7 @@ MonoBehaviour:
   isSmartBomb: 0
   explosionVFX: {fileID: 725748389856807712, guid: 4bda94453d2ca7444a0fff05b2d425f5,
     type: 3}
+  explosionSFX: {fileID: 0}
 --- !u!135 &361383831
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1174,7 +1177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &396625240
 Transform:
   m_ObjectHideFlags: 0
@@ -1529,6 +1532,7 @@ MonoBehaviour:
   isSmartBomb: 0
   explosionVFX: {fileID: 725748389856807712, guid: 4bda94453d2ca7444a0fff05b2d425f5,
     type: 3}
+  explosionSFX: {fileID: 0}
 --- !u!135 &511627658
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1686,7 +1690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &592234658
 Transform:
   m_ObjectHideFlags: 0
@@ -1804,7 +1808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &619650007
 Transform:
   m_ObjectHideFlags: 0
@@ -2169,6 +2173,7 @@ MonoBehaviour:
   isSmartBomb: 0
   explosionVFX: {fileID: 725748389856807712, guid: 4bda94453d2ca7444a0fff05b2d425f5,
     type: 3}
+  explosionSFX: {fileID: 0}
 --- !u!135 &692578120
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2688,6 +2693,7 @@ MonoBehaviour:
   isSmartBomb: 0
   explosionVFX: {fileID: 725748389856807712, guid: 4bda94453d2ca7444a0fff05b2d425f5,
     type: 3}
+  explosionSFX: {fileID: 0}
 --- !u!135 &822774021
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2967,6 +2973,7 @@ MonoBehaviour:
   isSmartBomb: 0
   explosionVFX: {fileID: 725748389856807712, guid: 4bda94453d2ca7444a0fff05b2d425f5,
     type: 3}
+  explosionSFX: {fileID: 0}
 --- !u!135 &869455635
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2996,6 +3003,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1387942764361284453, guid: b46e0f457f19a49438804c2a9da1af69,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9632
+      objectReference: {fileID: 0}
+    - target: {fileID: 1387942764361284453, guid: b46e0f457f19a49438804c2a9da1af69,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 18016
+      objectReference: {fileID: 0}
+    - target: {fileID: 1537374319258619634, guid: b46e0f457f19a49438804c2a9da1af69,
+        type: 3}
+      propertyPath: m_Name
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2119636599468001278, guid: b46e0f457f19a49438804c2a9da1af69,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3096,16 +3118,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2574523283114772230, guid: b46e0f457f19a49438804c2a9da1af69,
+        type: 3}
+      propertyPath: bombAbility
+      value: 
+      objectReference: {fileID: 1620407390}
     - target: {fileID: 3770152944554160411, guid: b46e0f457f19a49438804c2a9da1af69,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1111248166}
+    - target: {fileID: 3875436880900766924, guid: b46e0f457f19a49438804c2a9da1af69,
+        type: 3}
+      propertyPath: m_Name
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4250921155220785526, guid: b46e0f457f19a49438804c2a9da1af69,
+        type: 3}
+      propertyPath: m_Name
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431186386261144955, guid: b46e0f457f19a49438804c2a9da1af69,
+        type: 3}
+      propertyPath: m_Name
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4995391149665548941, guid: b46e0f457f19a49438804c2a9da1af69,
         type: 3}
       propertyPath: m_Name
       value: GridCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6587480961660810824, guid: b46e0f457f19a49438804c2a9da1af69,
+        type: 3}
+      propertyPath: m_Name
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6817362416151187345, guid: b46e0f457f19a49438804c2a9da1af69,
+        type: 3}
+      propertyPath: bombAbility
+      value: 
+      objectReference: {fileID: 1620407390}
+    - target: {fileID: 7768947688361246894, guid: b46e0f457f19a49438804c2a9da1af69,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9637
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768947688361246894, guid: b46e0f457f19a49438804c2a9da1af69,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -4161
+      objectReference: {fileID: 0}
+    - target: {fileID: 7768947688361246894, guid: b46e0f457f19a49438804c2a9da1af69,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 18120
+      objectReference: {fileID: 0}
+    - target: {fileID: 9042749874743737951, guid: b46e0f457f19a49438804c2a9da1af69,
+        type: 3}
+      propertyPath: bombAbility
+      value: 
+      objectReference: {fileID: 1620407390}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3271,6 +3343,7 @@ MonoBehaviour:
   isSmartBomb: 0
   explosionVFX: {fileID: 725748389856807712, guid: 4bda94453d2ca7444a0fff05b2d425f5,
     type: 3}
+  explosionSFX: {fileID: 0}
 --- !u!135 &961050764
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4187,6 +4260,7 @@ MonoBehaviour:
   isSmartBomb: 0
   explosionVFX: {fileID: 725748389856807712, guid: 4bda94453d2ca7444a0fff05b2d425f5,
     type: 3}
+  explosionSFX: {fileID: 0}
 --- !u!135 &1243764190
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4288,6 +4362,7 @@ MonoBehaviour:
   isSmartBomb: 0
   explosionVFX: {fileID: 725748389856807712, guid: 4bda94453d2ca7444a0fff05b2d425f5,
     type: 3}
+  explosionSFX: {fileID: 0}
 --- !u!135 &1289764188
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4510,6 +4585,7 @@ MonoBehaviour:
   isSmartBomb: 0
   explosionVFX: {fileID: 725748389856807712, guid: 4bda94453d2ca7444a0fff05b2d425f5,
     type: 3}
+  explosionSFX: {fileID: 0}
 --- !u!135 &1339271671
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4960,6 +5036,7 @@ MonoBehaviour:
   isSmartBomb: 0
   explosionVFX: {fileID: 725748389856807712, guid: 4bda94453d2ca7444a0fff05b2d425f5,
     type: 3}
+  explosionSFX: {fileID: 0}
 --- !u!135 &1488798444
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5061,6 +5138,7 @@ MonoBehaviour:
   isSmartBomb: 0
   explosionVFX: {fileID: 725748389856807712, guid: 4bda94453d2ca7444a0fff05b2d425f5,
     type: 3}
+  explosionSFX: {fileID: 0}
 --- !u!135 &1504424508
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5165,7 +5243,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1566986876
 Transform:
   m_ObjectHideFlags: 0
@@ -5426,6 +5504,7 @@ MonoBehaviour:
   isSmartBomb: 0
   explosionVFX: {fileID: 725748389856807712, guid: 4bda94453d2ca7444a0fff05b2d425f5,
     type: 3}
+  explosionSFX: {fileID: 0}
 --- !u!135 &1637644034
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5835,6 +5914,7 @@ MonoBehaviour:
   isSmartBomb: 0
   explosionVFX: {fileID: 725748389856807712, guid: 4bda94453d2ca7444a0fff05b2d425f5,
     type: 3}
+  explosionSFX: {fileID: 0}
 --- !u!135 &1832427527
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6235,6 +6315,7 @@ MonoBehaviour:
   isSmartBomb: 0
   explosionVFX: {fileID: 725748389856807712, guid: 4bda94453d2ca7444a0fff05b2d425f5,
     type: 3}
+  explosionSFX: {fileID: 0}
 --- !u!135 &2113046778
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6336,6 +6417,7 @@ MonoBehaviour:
   isSmartBomb: 0
   explosionVFX: {fileID: 725748389856807712, guid: 4bda94453d2ca7444a0fff05b2d425f5,
     type: 3}
+  explosionSFX: {fileID: 0}
 --- !u!135 &2117668359
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6437,6 +6519,7 @@ MonoBehaviour:
   isSmartBomb: 0
   explosionVFX: {fileID: 725748389856807712, guid: 4bda94453d2ca7444a0fff05b2d425f5,
     type: 3}
+  explosionSFX: {fileID: 0}
 --- !u!135 &2130221681
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6538,6 +6621,7 @@ MonoBehaviour:
   isSmartBomb: 0
   explosionVFX: {fileID: 725748389856807712, guid: 4bda94453d2ca7444a0fff05b2d425f5,
     type: 3}
+  explosionSFX: {fileID: 0}
 --- !u!135 &2130665840
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6639,6 +6723,7 @@ MonoBehaviour:
   isSmartBomb: 0
   explosionVFX: {fileID: 725748389856807712, guid: 4bda94453d2ca7444a0fff05b2d425f5,
     type: 3}
+  explosionSFX: {fileID: 0}
 --- !u!135 &2136685161
 SphereCollider:
   m_ObjectHideFlags: 0

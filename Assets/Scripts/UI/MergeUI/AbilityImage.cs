@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,7 @@ using UnityEngine.EventSystems;
 public enum AbilityType { SmartBomb, Bomb, Heal }
 public class AbilityImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    [SerializeField] private AbilityBomb_Controller bombAbility;
 
     private Transform originalParent;
     private Vector3 originalPosition;
@@ -47,21 +49,11 @@ public class AbilityImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     private void DeployAbilityOnLane(RaycastResult result)
     {
-        //Handle lane case
-        switch (result.gameObject.name)
-        {
-            case "Lane 1":
-                break;
-            case "Lane 2":
-                break;
-            case "Lane 3":
-                break;
-            case "Lane 4":
-                break;
-            case "Lane 5":
-                break;
-            default:
-                break;
-        }
+        bool isSmart = false;
+
+        if (abilityType == AbilityType.SmartBomb)
+            isSmart = true;
+
+        bombAbility.UseAbilityOnLane(Int32.Parse(result.gameObject.name) - 1, isSmart);
     }
 }

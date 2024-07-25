@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -97,26 +98,8 @@ public class TroopImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     }
     private void DeployTroopOnLane(RaycastResult result)
     {
-        switch (result.gameObject.name)
-        {
-            case "Lane 1":
-                spawner.SpawnTroop(type, 0);
-                break;
-            case "Lane 2":
-                spawner.SpawnTroop(type, 1);
-                break;
-            case "Lane 3":
-                spawner.SpawnTroop(type, 2);
-                break;
-            case "Lane 4":
-                spawner.SpawnTroop(type, 3);
-                break;
-            case "Lane 5":
-                spawner.SpawnTroop(type, 4);
-                break;
-            default:
-                break;
-        }
+        spawner.SpawnTroop(type, Int32.Parse(result.gameObject.name) - 1);
+        
         DeactivateTroopImage();
     }
 

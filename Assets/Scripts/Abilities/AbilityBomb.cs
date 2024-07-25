@@ -14,13 +14,13 @@ public class AbilityBomb : MonoBehaviour
     private void Start()
     {
         explosionSFX = Resources.Load<AudioClip>("BombExplode");
+
+        Invoke("SetDisableAfterTime", 3f);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         Explosion();
-
-        Invoke("SetDisableAfterTime", 5f);
     }
 
     private void SetDisableAfterTime()
