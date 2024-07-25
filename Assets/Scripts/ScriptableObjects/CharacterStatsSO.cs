@@ -11,6 +11,7 @@ public class CharacterStatsSO : ScriptableObject
     public Stat maxHealth;
     public int power;
     public int laneIndex;
+    public int marketPrice;
 }
 
 public static class ScriptableObjectUtility

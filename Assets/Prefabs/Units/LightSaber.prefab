@@ -239,6 +239,7 @@ MonoBehaviour:
   laneIndex: 4
   currentHealth: 0
   laneManager: {fileID: 0}
+  marketPrice: 50
 --- !u!54 &5691857144814913239
 Rigidbody:
   m_ObjectHideFlags: 0

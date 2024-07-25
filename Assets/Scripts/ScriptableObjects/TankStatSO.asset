@@ -15,9 +15,10 @@ MonoBehaviour:
   npcName: Tank
   damage:
     baseValue: 80
-    modifiers: 
+    modifiers: 0a0000000a0000000a000000
   maxHealth:
     baseValue: 500
-    modifiers: 
+    modifiers: 0a0000000a0000000a000000
   power: 0
   laneIndex: 0
+  marketPrice: 200

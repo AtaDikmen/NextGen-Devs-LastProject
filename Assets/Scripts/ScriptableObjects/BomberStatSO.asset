@@ -15,9 +15,10 @@ MonoBehaviour:
   npcName: Bomber
   damage:
     baseValue: 25
-    modifiers: 
+    modifiers: 0a0000000a0000000a0000000a0000000a000000
   maxHealth:
     baseValue: 100
-    modifiers: 
+    modifiers: 0a0000000a0000000a0000000a0000000a000000
   power: 0
   laneIndex: 0
+  marketPrice: 150

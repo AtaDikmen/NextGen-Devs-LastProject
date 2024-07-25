@@ -139,6 +139,7 @@ MonoBehaviour:
   laneIndex: 2
   currentHealth: 0
   laneManager: {fileID: 0}
+  marketPrice: 200
 --- !u!114 &8304834938929168576
 MonoBehaviour:
   m_ObjectHideFlags: 0
