@@ -11,7 +11,7 @@ public class GridManager : MonoBehaviour
     private List<TroopImage> troopImages;
     [SerializeField] private int gridSize = 16;
     [SerializeField] private int spawnCount = 2;
-
+    [SerializeField] private int spawnPrice = 3;
     public static GridManager Instance;
 
     private void Awake()
@@ -43,6 +43,7 @@ public class GridManager : MonoBehaviour
     }
     public void SpawnTroopsOnUI()
     {
+        if (PlayerManager.Instance.CurrentPlayerGold < spawnPrice) return;
         int tempSpawnCount = 0;
         int i = 0;
         while (tempSpawnCount < spawnCount && i < gridSize)
@@ -58,6 +59,7 @@ public class GridManager : MonoBehaviour
         {
             AudioClip declineMergeSFX = Resources.Load<AudioClip>("Spawn");
             AudioManager.Instance.PlaySFX(declineMergeSFX, transform);
+            PlayerManager.Instance.CurrentPlayerGold -= spawnPrice;
         }
 
     }

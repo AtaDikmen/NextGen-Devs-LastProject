@@ -40,6 +40,8 @@ public class NpcStats : MonoBehaviour
 
     protected virtual void Die()
     {
+        if (gameObject.layer == LayerMask.NameToLayer("BlueTeam"))
+            PlayerManager.Instance.CurrentPlayerGold += power / 5;
         healthBar.gameObject.SetActive(false);
         laneManager.RemoveTroop(transform, laneIndex);
     }
