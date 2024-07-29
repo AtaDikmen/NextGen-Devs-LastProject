@@ -32,7 +32,7 @@
  
 - **Tema**
 
-    * Koridor tabanlı birleştirme ve sci-fci türünde oyundur.
+    * Koridor tabanlı birleştirme ve sci-fi türünde oyundur.
  
 ## Esinlenilen Eserler
 - **Warlords: Call to Arms Warlords: Call to Arms**
