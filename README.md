@@ -13,20 +13,17 @@
 
    - **Developers**:
       * <a><img align="center" /></a> [Ata Dikmen](https://www.linkedin.com/in/ata-dikmen/)
-      * <a><img align="center" /></a> [Emir Özçelik](https://www.linkedin.com/in/emir-ozcelik/)
-      * <a><img align="center" /></a> [Hatice Esra Yılmaz](https://www.linkedin.com/in/hesrayilmaz/)
       * <a><img align="center" /></a> [Can Usluel](https://www.linkedin.com/in/canusluel/)
+      * <a><img align="center" /></a> [Hatice Esra Yılmaz](https://www.linkedin.com/in/hesrayilmaz/)
+      * <a><img align="center" /></a> [Emir Özçelik](https://www.linkedin.com/in/emir-ozcelik/)
 
    - **Game Designers**:
       * <a><img align="center" /></a> [Utku Gezensoy](https://www.linkedin.com/in/utkugezensoy/)
       * <a><img align="center" /></a> [Ebrar Tekiş](https://www.linkedin.com/in/ebrartekis/)
 
-   - **Artists**:
+   - **Artist**:
       * <a><img align="center" /></a> [Ferhan Sönmez](https://www.linkedin.com/in/ferhansonmez/)
 
-
-## Hikaye
-- Alliance Command, medeniyetin çöküşü sonrası modern teknolojinin kaybolduğu bir dünyada geçer. Oyuncular, terkedilmiş şehirler ve vahşi doğada hayatta kalmaya çalışır. Amaç, merkez üslerini düşman saldırılarına karşı korumaktır. Kahramanlardan oluşan ekipler kurar, stratejiler geliştirir ve kaynak toplarlar. Oyun, gerçek zamanlı strateji, aksiyon dolu savaşlar ve kaynak yönetimini birleştirir. Her karar, ekibin hayatta kalma şansını ve üssün güvenliğini doğrudan etkiler.
 
 ## Oyun Tanımı
 - **Özet**
